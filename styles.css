@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    background-image: url(./bg.jpg);
+    background-image: url(./assets/bg.jpg);
     background-size: cover;
     color: white;
 }
@@ -14,10 +14,14 @@ header{
 footer{
     padding-left: 5em;
     padding-bottom: 2em;
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #logo{
-    width: 200px;
+    width: 180px;
 }
 
 main{
@@ -40,8 +44,13 @@ p{
     font-size: 16px;
 }
 
+ul{
+    padding: 1.5em;
+}
+
 li{
     font-family: 'Inter', sans-serif;
+    line-height: 2em;
     font-size: 16px;
 }
 
@@ -50,15 +59,18 @@ label{
     font-size: 16px;
 }
 
-em{
-    font-weight: bold;
-}
-
-
-
 button{
     background-color: #00ffff;
     border: none;
-    padding: 1em;
-    box-shadow: 10px 5px 5px 5px #00ffff80;
+    padding: 0.8em 3em;
+    box-shadow: 0px 0px 35px 5px #00FFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0B1D45;
 }
+
+/* #promise{
+    background-color: none;
+    border: 1px white;
+} per modificare le checkbox probabilmente serve JS*/
