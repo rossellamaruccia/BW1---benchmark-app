@@ -1,64 +1,119 @@
-body{
-    width: 100%;
-    background-image: url(./bg.jpg);
-    background-size: cover;
-    color: white;
+body {
+  width: 100%;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  color: white;
 }
 
-header{
-    text-align: left;
-    padding-top: 2em;
-    padding-left: 5em;
+header {
+  text-align: left;
+  padding-top: 2em;
+  padding-left: 5em;
 }
 
-footer{
-    padding-left: 5em;
-    padding-bottom: 2em;
+footer {
+  padding-left: 5em;
+  padding-bottom: 2em;
 }
 
-#logo{
-    width: 200px;
+#logo {
+  width: 200px;
 }
 
-main{
-    padding: 5em;
+main {
+  padding: 5em;
 }
 
-h1{
-    font-family: 'Outfit', sans-serif;
-    font-size: 60px;
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
 }
 
-h2{
-    font-family: 'Outfit', sans-serif;
-    color: #D20094;
-    font-size: 24px;
+h2 {
+  font-family: "Outfit", sans-serif;
+  color: #d20094;
+  font-size: 24px;
 }
 
-p{
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
-li{
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+li {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
-label{
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+label {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
-em{
-    font-weight: bold;
+em {
+  font-weight: bold;
 }
 
+button {
+  background-color: #00ffff;
+  border: none;
+  padding: 1em;
+  box-shadow: 10px 5px 5px 5px #00ffff80;
+  cursor: pointer;
+  margin: auto;
+  font-weight: bold;
+  font-size: 2em;
+}
 
+#feedback-page main {
+  display: inline-block;
+  width: 100%;
+}
 
-button{
-    background-color: #00ffff;
-    border: none;
-    padding: 1em;
-    box-shadow: 10px 5px 5px 5px #00ffff80;
+#feedback-page h1 {
+  font-size: 5em;
+  text-align: center;
+}
+
+#feedback-page h3 {
+  font-size: 2em;
+  font-weight: normal;
+  text-align: center;
+  margin: auto;
+  max-width: 50%;
+}
+
+#rating-stars {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+#rating-stars span {
+  padding-left: 30px;
+}
+
+#rating-stars img {
+  cursor: pointer;
+  width: 3.8em;
+}
+
+#comment {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#comment input {
+  width: 50%;
+  background-color: transparent;
+  font-size: 1.4em;
+  margin: 60px;
+  border: unset;
+  border-bottom: #d20094 solid 3px;
+}
+
+#feedback-button {
+  text-align: center;
 }
