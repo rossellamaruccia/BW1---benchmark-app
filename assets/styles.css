@@ -1,11 +1,28 @@
 body{
     width: 100%;
-    text-align: center;
     background-image: url(./bg.jpg);
     background-size: cover;
     color: white;
 }
 
+header{
+    text-align: left;
+    padding-top: 2em;
+    padding-left: 5em;
+}
+
+footer{
+    padding-left: 5em;
+    padding-bottom: 2em;
+}
+
+#logo{
+    width: 200px;
+}
+
+main{
+    padding: 5em;
+}
 
 h1{
     font-family: 'Outfit', sans-serif;
@@ -37,13 +54,7 @@ em{
     font-weight: bold;
 }
 
-header{
-    text-align: left;
-    padding: 1rem;
-}
-#logo{
-    width: 200px;
-}
+
 
 button{
     background-color: #00ffff;
