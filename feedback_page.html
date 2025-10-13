@@ -12,22 +12,40 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body id="feedback-page">
     <header>
-      <div id="logo">
-        <img src="assets/epicode_logo.png" alt="logo" />
+      <div>
+        <img id="logo" src="assets/epicode_logo.png" alt="logo" />
       </div>
     </header>
+
     <main>
-      <h1>Tell us how it's going</h1>
-      <h3>
-        From 0 to 10, how likely are you to recommend EPICODE to a friend or a
-        colleague?
-      </h3>
-      <div id="rating-stars"></div>
-      <h3>Leave us an open feedback about your experience so far</h3>
-      <input type="text" placeholder="write your comments here" />
-      <button id="Feedback-button">MORE INFO</button>
+      <div>
+        <h1>Tell us how it's going</h1>
+        <h3>
+          From 0 to 10, how likely are you to recommend EPICODE to a friend or a
+          colleague?
+        </h3>
+        <div id="rating-stars">
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+          <span> <img src="assets/star.svg" alt="star" /></span>
+        </div>
+        <h3>Leave us an open feedback about your experience so far</h3>
+        <div id="comment">
+          <input type="text" placeholder="write your comments here" />
+        </div>
+        <div id="feedback-button">
+          <button>MORE INFO</button>
+        </div>
+      </div>
     </main>
     <footer></footer>
   </body>
