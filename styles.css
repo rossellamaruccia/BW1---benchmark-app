@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background-image: url(./bg.jpg);
+  background-image: url(assets/bg.jpg);
   background-size: cover;
   color: white;
 }
@@ -11,17 +11,17 @@ header {
   padding-left: 5em;
 }
 
-footer{
-    padding-left: 5em;
-    padding-bottom: 2em;
-    display: flex;
-    width: 75%;
-    justify-content: space-between;
-    align-items: center;
+footer {
+  padding-left: 5em;
+  padding-bottom: 2em;
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#logo{
-    width: 180px;
+#logo {
+  width: 180px;
 }
 
 main {
@@ -44,14 +44,14 @@ p {
   font-size: 16px;
 }
 
-ul{
-    padding: 1.5em;
+ul {
+  padding: 1.5em;
 }
 
-li{
-    font-family: 'Inter', sans-serif;
-    line-height: 2em;
-    font-size: 16px;
+li {
+  font-family: "Inter", sans-serif;
+  line-height: 2em;
+  font-size: 16px;
 }
 
 label {
@@ -124,6 +124,12 @@ button:hover {
   margin: 60px;
   border: unset;
   border-bottom: #d20094 solid 3px;
+  color: white;
+  outline: none;
+}
+
+#comment input:hover {
+  font-size: 1.8em;
 }
 
 #feedback-button {
