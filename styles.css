@@ -11,9 +11,10 @@ header {
   padding-left: 5em;
 }
 
-footer {
-  padding-left: 5em;
-  padding-bottom: 2em;
+footer{
+    padding-left: 5em;
+    padding-bottom: 2em;
+
 }
 
 .logo {
@@ -25,9 +26,13 @@ main {
   padding: 5em;
 }
 
-h1 {
-  font-family: "Outfit", sans-serif;
-  font-size: 60px;
+main .align_left{
+  text-align: left;
+}
+
+h1{
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
 }
 
 h2 {
@@ -55,16 +60,20 @@ label {
   font-size: 16px;
 }
 
-button {
-  background-color: #00ffff;
-  border: none;
-  padding: 1em;
-  box-shadow: 10px 5px 5px 5px #00ffff80;
-  cursor: pointer;
-  margin: auto;
-  font-weight: bold;
-  font-size: 2em;
+.blue_button{
+    background-color: #00ffff;
+    border: none;
+    padding: 0.8em 3em;
+    box-shadow: 0px 0px 35px 5px #00FFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0B1D45;
 }
+
+.checkbox_div{
+  display: inline-block;
+  width: 60%;}
 
 button:hover {
   font-size: 2.2em;
