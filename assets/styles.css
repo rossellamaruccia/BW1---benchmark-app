@@ -20,6 +20,7 @@ footer {
 }
 
 main {
+  text-align: center;
   padding: 5em;
 }
 
@@ -58,4 +59,47 @@ button {
   border: none;
   padding: 1em;
   box-shadow: 10px 5px 5px 5px #00ffff80;
+}
+.titResults {
+  text-align: center;
+  font-size: 50px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.titResults h2 {
+  color: white;
+  font-size: 60px;
+  margin: 0 auto;
+}
+.titResults h3 {
+  font-size: 35px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+#resultscontainer {
+  text-align: center;
+}
+#resultscontainer div {
+  display: ruby-text;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+}
+#resultscontainer h2 {
+  color: white;
+  font-weight: normal;
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+#rateUs {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border: white solid 2px;
+  margin-top: 5em;
+  box-shadow: none;
+  padding: 18px 68px;
 }
