@@ -1,131 +1,116 @@
-
-
-
-
 /* PAGINA 2. */
-
-
-
 
 /* LOGICA E FUNZIONAMENTO DOMANDE. BYLORE */
 const questions = [
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question: "What does CPU stand for?",
-        correct_answer: "Central Processing Unit",
-        incorrect_answers: [
-          "Central Process Unit",
-          "Computer Personal Unit",
-          "Central Processor Unit",
-        ],
-      },
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question:
-          "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
-        correct_answer: "Final",
-        incorrect_answers: ["Static", "Private", "Public"],
-      },
-      {
-        category: "Science: Computers",
-        type: "boolean",
-        difficulty: "easy",
-        question: "The logo for Snapchat is a Bell.",
-        correct_answer: "False",
-        incorrect_answers: ["True"],
-      },
-      {
-        category: "Science: Computers",
-        type: "boolean",
-        difficulty: "easy",
-        question:
-          "Pointers were not used in the original C programming language; they were added later on in C++.",
-        correct_answer: "False",
-        incorrect_answers: ["True"],
-      },
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question:
-          "What is the most preferred image format used for logos in the Wikimedia database?",
-        correct_answer: ".svg",
-        incorrect_answers: [".png", ".jpeg", ".gif"],
-      },
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question: "In web design, what does CSS stand for?",
-        correct_answer: "Cascading Style Sheet",
-        incorrect_answers: [
-          "Counter Strike: Source",
-          "Corrective Style Sheet",
-          "Computer Style Sheet",
-        ],
-      },
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question:
-          "What is the code name for the mobile operating system Android 7.0?",
-        correct_answer: "Nougat",
-        incorrect_answers: [
-          "Ice Cream Sandwich",
-          "Jelly Bean",
-          "Marshmallow",
-        ],
-      },
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question: "On Twitter, what is the character limit for a Tweet?",
-        correct_answer: "140",
-        incorrect_answers: ["120", "160", "100"],
-      },
-      {
-        category: "Science: Computers",
-        type: "boolean",
-        difficulty: "easy",
-        question: "Linux was first created as an alternative to Windows XP.",
-        correct_answer: "False",
-        incorrect_answers: ["True"],
-      },
-      {
-        category: "Science: Computers",
-        type: "multiple",
-        difficulty: "easy",
-        question:
-          "Which programming language shares its name with an island in Indonesia?",
-        correct_answer: "Java",
-        incorrect_answers: ["Python", "C", "Jakarta"],
-      },
-    ];
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "What does CPU stand for?",
+    correct_answer: "Central Processing Unit",
+    incorrect_answers: [
+      "Central Process Unit",
+      "Computer Personal Unit",
+      "Central Processor Unit",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    correct_answer: "Final",
+    incorrect_answers: ["Static", "Private", "Public"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question: "The logo for Snapchat is a Bell.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question:
+      "Pointers were not used in the original C programming language; they were added later on in C++.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What is the most preferred image format used for logos in the Wikimedia database?",
+    correct_answer: ".svg",
+    incorrect_answers: [".png", ".jpeg", ".gif"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "In web design, what does CSS stand for?",
+    correct_answer: "Cascading Style Sheet",
+    incorrect_answers: [
+      "Counter Strike: Source",
+      "Corrective Style Sheet",
+      "Computer Style Sheet",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What is the code name for the mobile operating system Android 7.0?",
+    correct_answer: "Nougat",
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "On Twitter, what is the character limit for a Tweet?",
+    correct_answer: "140",
+    incorrect_answers: ["120", "160", "100"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question: "Linux was first created as an alternative to Windows XP.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "Which programming language shares its name with an island in Indonesia?",
+    correct_answer: "Java",
+    incorrect_answers: ["Python", "C", "Jakarta"],
+  },
+];
 
- //Variabili
-let indice = 0;                  // indice della domanda corrente
-const risposteDate = [];         // array per salvare le risposte
-
+//Variabili
+let indice = 0; // indice della domanda corrente
+const risposteDate = []; // array per salvare le risposte
 
 function valutaRisposte() {
   // Array delle risposte corrette
-  const risposteCorrette = questions.map(q => q.correct_answer);
+  const risposteCorrette = questions.map((q) => q.correct_answer);
   // Confronta risposteDate con risposteCorrette e conta quante sono corrette
   const numeroCorrette = risposteDate.reduce((count, risposta, i) => {
     return count + (risposta === risposteCorrette[i] ? 1 : 0);
   }, 0);
   // Salva il numero di risposte corrette in una variabile globale
   window.numeroRisposteCorrette = numeroCorrette;
-
 }
-
-
 
 // Elementi HTML
 const quizContainer = document.getElementById("quiz-container");
@@ -147,6 +132,11 @@ quizContainer.appendChild(inviaBtn);
 // Funzione per mostrare la domanda corrente
 function mostraDomanda() {
   // se siamo alla fine, non mostrare più domande
+
+  clearInterval(IntervalloTempo);
+  tempoRimasto = 10;
+  timerEl.textContent = tempoRimasto;
+  startTimer();
   if (indice >= questions.length) return;
 
   const domanda = questions[indice];
@@ -158,11 +148,13 @@ function mostraDomanda() {
   opzioniEl.innerHTML = "";
 
   // crea array di tutte le opzioni (corretta + sbagliate) e mescola
-  const tutteLeOpzioni = [domanda.correct_answer, ...domanda.incorrect_answers]
-    .sort(() => Math.random() - 0.5);
+  const tutteLeOpzioni = [
+    domanda.correct_answer,
+    ...domanda.incorrect_answers,
+  ].sort(() => Math.random() - 0.5);
 
   // crea i bottoni per ciascuna opzione
-  tutteLeOpzioni.forEach(opzione => {
+  tutteLeOpzioni.forEach((opzione) => {
     const btn = document.createElement("button");
     btn.textContent = opzione;
     btn.type = "button";
