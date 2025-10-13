@@ -22,11 +22,10 @@ footer{
 }
 
 main {
-  text-align: center;
   padding: 5em;
 }
 
-main .align_left{
+#welcome_page{
   text-align: left;
 }
 
@@ -48,11 +47,13 @@ p {
 
 ul {
   padding: 1.5em;
+  margin-bottom: 3em;
 }
 
 li {
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  line-height: 2em;
 }
 
 label {
@@ -73,11 +74,12 @@ label {
 
 .checkbox_div{
   display: inline-block;
-  width: 60%;}
-
-button:hover {
-  font-size: 2.2em;
+  width: 80%;
 }
+
+/* button:hover {
+  font-size: 2.2em;
+} */
 
 #feedback-page main {
   display: inline-block;
