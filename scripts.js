@@ -169,6 +169,7 @@ inviaBtn.onclick = () => {
   alert("Quiz completato!");
   console.log("Risposte date:", risposteDate);
   valutaRisposte();
+  window.location.href = "results_page.html";
 };
 quizContainer.appendChild(inviaBtn);
 
