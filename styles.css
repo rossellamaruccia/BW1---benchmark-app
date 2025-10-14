@@ -1,5 +1,5 @@
 body {
-  width: 100%;
+  width: 100vw;
   background-image: url(./assets/bg.jpg);
   background-size: cover;
   color: white;
@@ -72,7 +72,7 @@ button:hover {
 
 #feedback-page main {
   display: inline-block;
-  width: 100%;
+  width: 100vw;
 }
 
 #feedback-page h1 {
@@ -132,14 +132,6 @@ button:hover {
 
 #comment input:hover {
   font-size: 1.8em;
-}
-
-#comment input ::placeholder {
-  padding-left: 100px;
-}
-
-#feedback-button {
-  text-align: center;
 }
 
 .titResults {
