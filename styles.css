@@ -12,35 +12,34 @@ header {
   padding-left: 5em;
 }
 
-footer{
-    padding-left: 5em;
-    padding-bottom: 2em;
+footer {
+  padding-left: 5em;
+  padding-bottom: 2em;
 }
 
 .logo {
   width: 200px;
 }
 
-
-#welcome_page{
+#welcome_page {
   text-align: left;
   display: block;
   padding: 5em;
 }
 
-h1{
-    font-family: 'Outfit', sans-serif;
-    font-size: 60px;
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
 }
 
-h2{
+h2 {
   font-size: 50px;
   font-weight: 700;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
-h3{
-  font-family: 'Outfit', sans-serif;
+h3 {
+  font-family: "Outfit", sans-serif;
   font-size: 2em;
   font-weight: normal;
   margin: auto;
@@ -73,19 +72,19 @@ label {
   font-size: 16px;
 }
 
-.blue_button{
-    background-color: #00ffff;
-    border: none;
-    padding: 0.8em 3em;
-    box-shadow: 0px 0px 35px 5px #00FFFF;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #0B1D45;
-    text-align: center;
+.blue_button {
+  background-color: #00ffff;
+  border: none;
+  padding: 0.8em 3em;
+  box-shadow: 0px 0px 35px 5px #00ffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0b1d45;
+  text-align: center;
 }
 
-.checkbox_div{
+.checkbox_div {
   display: inline-block;
   width: 80%;
 }
@@ -94,7 +93,7 @@ label {
   font-size: 2.2em;
 } */
 
-#feedback-page{
+#feedback-page {
   display: block;
   width: 100%;
   text-align: center;
@@ -145,8 +144,6 @@ label {
 /* #comment input:hover {
   font-size: 1.8em;
 } */
-
-
 .titResults {
   text-align: center;
   font-size: 50px;
@@ -165,22 +162,48 @@ label {
 }
 #resultscontainer {
   text-align: center;
+  margin: 0 auto;
+  font-size: 0;
+  margin-top: 3em;
+  /* posizionare tutti gli elementi uno accanto all'altro */
 }
 #resultscontainer div {
-  display: ruby-text;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
   text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 5%;
+  /* padding: 2em 0; */
 }
 #resultscontainer h2 {
   color: white;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 60px;
   margin: 0 auto;
 }
+/* testp percentuale */
 
+/* Risposte esatte e sbagliate */
+#resultscontainer .RightAnswers,
+#resultscontainer .WrongAnswers {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  font-size: 16px;
+  margin: 0 60px;
+  text-align: center;
+}
+#resultscontainer .Circle-container {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  font-size: 16px;
+  margin: 0 30px;
+  text-align: center;
+}
+/* bottone */
 #rateUs {
+  display: block;
+  margin: 0 auto;
   font-weight: bold;
   font-size: 20px;
   color: white;
@@ -189,4 +212,10 @@ label {
   margin-top: 5em;
   box-shadow: none;
   padding: 18px 68px;
+}
+#rateUs:hover {
+  box-shadow: 0px 0px 35px 5px #00ffff;
+  background-color: #00ffff;
+  color: #0b1d45;
+  cursor: pointer;
 }
