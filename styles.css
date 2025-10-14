@@ -3,6 +3,7 @@ body {
   background-image: url(./assets/bg.jpg);
   background-size: cover;
   color: white;
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -20,18 +21,30 @@ footer {
   width: 200px;
 }
 
-main {
-  padding: 5em;
-}
 
 #welcome_page {
   text-align: left;
   display: block;
+  padding: 5em;
 }
 
 h1 {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
+}
+
+h2{
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+h3{
+  font-family: 'Outfit', sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  margin: auto;
+  max-width: 50%;
 }
 
 h5 {
@@ -41,7 +54,6 @@ h5 {
 }
 
 p {
-  font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
@@ -82,27 +94,15 @@ label {
   font-size: 2.2em;
 } */
 
-#feedback-page main {
-  display: inline-block;
-  width: 100vw;
-}
-
-#feedback-page h1 {
-  font-size: 7em;
+#feedback-page{
+  display: block;
+  width: 100%;
   text-align: center;
-}
-
-#feedback-page h3 {
-  font-size: 3em;
-  font-weight: normal;
-  text-align: center;
-  margin: auto;
-  max-width: 45%;
 }
 
 #rating-stars {
-  margin-top: 100px;
-  margin-bottom: 110px;
+  margin-top: 5em;
+  margin-bottom: 5em;
   text-align: center;
 }
 
@@ -144,17 +144,18 @@ label {
 
 #comment input:hover {
   font-size: 1.8em;
-}
-#feedback-page .blue_button {
-  display: block;
-  margin: auto;
-  font-size: 2em;
-  cursor: pointer;
-}
-#feedback-page button:hover {
-  font-size: 2.1em;
-}
-
+  }
+  #feedback-page .blue_button {
+    display: block;
+    margin: auto;
+    font-size: 2em;
+    cursor: pointer;
+    }
+    #feedback-page button:hover {
+      font-size: 2.1em;
+      }
+      
+      /*
 .titResults {
   text-align: center;
   font-size: 50px;
