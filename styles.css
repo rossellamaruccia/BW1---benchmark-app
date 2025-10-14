@@ -21,8 +21,12 @@ footer {
 }
 
 main {
-  text-align: center;
   padding: 5em;
+}
+
+#welcome_page {
+  text-align: left;
+  display: block;
 }
 
 h1 {
@@ -30,7 +34,7 @@ h1 {
   font-size: 60px;
 }
 
-h2 {
+h5 {
   font-family: "Outfit", sans-serif;
   color: #d20094;
   font-size: 24px;
@@ -43,11 +47,13 @@ p {
 
 ul {
   padding: 1.5em;
+  margin-bottom: 3em;
 }
 
 li {
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  line-height: 2em;
 }
 
 label {
@@ -55,20 +61,26 @@ label {
   font-size: 16px;
 }
 
-button {
+.blue_button {
   background-color: #00ffff;
   border: none;
-  padding: 1em;
-  box-shadow: 10px 5px 5px 5px #00ffff80;
-  cursor: pointer;
-  margin: auto;
+  padding: 0.8em 3em;
+  box-shadow: 0px 0px 35px 5px #00ffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
   font-weight: bold;
-  font-size: 2em;
+  color: #0b1d45;
+  text-align: center;
 }
 
-button:hover {
-  font-size: 2.2em;
+.checkbox_div {
+  display: inline-block;
+  width: 80%;
 }
+
+/* button:hover {
+  font-size: 2.2em;
+} */
 
 #feedback-page main {
   display: inline-block;
