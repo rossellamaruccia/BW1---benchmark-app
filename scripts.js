@@ -1,24 +1,3 @@
-// LOGICA STELLE FEEDBACK
-
-const stars = document.querySelectorAll("#rating-stars img")
-let selected = 0
-
-stars.forEach((star, index) => {
-  star.addEventListener("mouseover", () => {
-    stars.forEach((s) => s.classList.remove("hovered"))
-    for (let i = 0; i <= index; i++) stars[i].classList.add("hovered")
-  })
-
-  star.addEventListener("mouseout", () => {
-    stars.forEach((s) => s.classList.remove("hovered"))
-  })
-
-  star.addEventListener("click", () => {
-    selected = index
-    stars.forEach((s) => s.classList.remove("selected"))
-    for (let i = 0; i <= selected; i++) stars[i].classList.add("selected")
-  })
-})
 
 /* PAGINA 2. */
 
@@ -134,6 +113,41 @@ function valutaRisposte() {
   window.numeroRisposteCorrette = numeroCorrette
 }
 
+let tempoRimasto = 5;
+let timerInterval = null;
+
+function avviaTimer() {
+  const circle = document.getElementById("progress");
+  const text = document.getElementById("timer-text");
+  const raggio = circle.r.baseVal.value;
+  const circonferenza = 2 * Math.PI * raggio;
+
+  circle.style.strokeDasharray = circonferenza;
+  circle.style.strokeDashoffset = 0;
+
+  tempoRimasto = 5;
+  text.textContent = tempoRimasto;
+
+  // cancella un eventuale timer precedente
+  clearInterval(timerInterval);
+
+  timerInterval = setInterval(() => {
+    tempoRimasto--;
+    text.textContent = tempoRimasto;
+
+    // calcolo animazione cerchio
+    const offset = circonferenza - (tempoRimasto / 45) * circonferenza;
+    circle.style.strokeDashoffset = offset;
+
+    if (tempoRimasto <= 0) {
+      clearInterval(timerInterval);
+      risposteDate.push("errore"); // nessuna risposta data
+      indice++;
+      mostraDomanda();
+    }
+  }, 1000);
+}
+
 // Elementi HTML
 const quizContainer = document.getElementById("quiz-container")
 const domandaEl = document.getElementById("domanda")
@@ -153,6 +167,8 @@ quizContainer.appendChild(inviaBtn)
 
 // Funzione per mostrare la domanda corrente
 function mostraDomanda() {
+
+  avviaTimer();
   // se siamo alla fine, non mostrare più domande
   if (indice >= questions.length) return
 
@@ -179,7 +195,7 @@ function mostraDomanda() {
     btn.onclick = () => {
       // salva risposta cliccata
       risposteDate.push(opzione)
-
+clearInterval(timerInterval);
       // passa alla prossima domanda
       indice++
 
