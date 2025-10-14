@@ -164,13 +164,17 @@ label {
 }
 #resultscontainer {
   text-align: center;
-  display: ruby-text;
+  margin: 0 auto;
+  font-size: 0;
+  margin-top: 3em;
+  /* posizionare tutti gli elementi uno accanto all'altro */
 }
 #resultscontainer div {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
   text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2em 0;
+  /* padding: 2em 0; */
 }
 #resultscontainer h2 {
   color: white;
@@ -184,13 +188,19 @@ label {
 #resultscontainer .RightAnswers,
 #resultscontainer .WrongAnswers {
   display: inline-block;
-  width: 45%;
-  vertical-align: top;
+  width: auto;
+  vertical-align: middle;
+  font-size: 16px;
+  margin: 0 60px;
+  text-align: center;
 }
 #resultscontainer .Circle-container {
   display: inline-block;
-  width: 10%;
-  vertical-align: top;
+  width: auto;
+  vertical-align: middle;
+  font-size: 16px;
+  margin: 0 30px;
+  text-align: center;
 }
 /* bottone */
 #rateUs {
@@ -211,10 +221,43 @@ label {
   color: #0b1d45;
   cursor: pointer;
 }
+/* cerchio */
 
 /* .container {
-  width: 160px;
-  height: 160px;
-  background-color: purple;
+  width: 250px;
+  height: 250px;
   position: relative;
+}
+.outer {
+  height: 250px;
+  width: 250px;
+  padding: 24px;
+  padding-top: 32px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+}
+.inner {
+  height: 210px;
+  width: 210px;
+  align-items: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(83, 83, 83, 0.7),
+    -0.5px -0.5px 0px rgb(15, 15, 15), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+#resultText {
+  font-weight: 600;
+  color: white;
+}
+circle {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 20px;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 } */
