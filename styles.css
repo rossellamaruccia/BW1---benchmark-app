@@ -3,6 +3,7 @@ body {
   background-image: url(./assets/bg.jpg);
   background-size: cover;
   color: white;
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -11,27 +12,40 @@ header {
   padding-left: 5em;
 }
 
-footer {
-  padding-left: 5em;
-  padding-bottom: 2em;
+footer{
+    padding-left: 5em;
+    padding-bottom: 2em;
+
 }
 
 .logo {
   width: 200px;
 }
 
-main {
-  padding: 5em;
-}
 
 #welcome_page {
   text-align: left;
   display: block;
+  padding: 5em;
 }
 
 h1 {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
+}
+
+h2{
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+h3{
+  font-family: 'Outfit', sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  margin: auto;
+  max-width: 50%;
 }
 
 h5 {
@@ -41,7 +55,6 @@ h5 {
 }
 
 p {
-  font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
@@ -82,27 +95,15 @@ label {
   font-size: 2.2em;
 } */
 
-#feedback-page main {
-  display: inline-block;
+#feedback-page{
+  display: block;
   width: 100%;
-}
-
-#feedback-page h1 {
-  font-size: 5em;
   text-align: center;
-}
-
-#feedback-page h3 {
-  font-size: 2em;
-  font-weight: normal;
-  text-align: center;
-  margin: auto;
-  max-width: 50%;
 }
 
 #rating-stars {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 5em;
+  margin-bottom: 5em;
   text-align: center;
 }
 
@@ -118,7 +119,7 @@ label {
 #rating-stars img.hovered,
 #rating-stars img.selected {
   background-color: gold;
-  padding: 3px;
+  /* padding: 3px; */
   /* VERSIONE CSS AVANZATO */
   /* filter: brightness(1.2) saturate(1.4) sepia(1) hue-rotate(10deg) saturate(4)
     brightness(1.1); */
@@ -142,10 +143,11 @@ label {
   outline: none;
 }
 
-#comment input:hover {
+/* #comment input:hover {
   font-size: 1.8em;
 }
-/* pagina 3 */
+
+
 .titResults {
   text-align: center;
   font-size: 50px;
