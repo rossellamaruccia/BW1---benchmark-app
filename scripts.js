@@ -95,91 +95,135 @@ const questions = [
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
-]
+];
 
 //Variabili
-let indice = 0 // indice della domanda corrente
-const risposteDate = [] // array per salvare le risposte
+let indice = 0; // indice della domanda corrente
+const risposteDate = []; // array per salvare le risposte
 
 function valutaRisposte() {
   // Array delle risposte corrette
-  const risposteCorrette = questions.map((q) => q.correct_answer)
+  const risposteCorrette = questions.map((q) => q.correct_answer);
   // Confronta risposteDate con risposteCorrette e conta quante sono corrette
   const numeroCorrette = risposteDate.reduce((count, risposta, i) => {
-    return count + (risposta === risposteCorrette[i] ? 1 : 0)
-  }, 0)
+    return count + (risposta === risposteCorrette[i] ? 1 : 0);
+  }, 0);
   // Salva il numero di risposte corrette in una variabile globale
-  window.numeroRisposteCorrette = numeroCorrette
+  window.numeroRisposteCorrette = numeroCorrette;
+}
+
+let tempoRimasto = 5;
+let timerInterval = null;
+
+function avviaTimer() {
+  const circle = document.getElementById("progress");
+  const text = document.getElementById("timer-text");
+  const raggio = circle.r.baseVal.value;
+  const circonferenza = 2 * Math.PI * raggio;
+
+  circle.style.strokeDasharray = circonferenza;
+  circle.style.strokeDashoffset = 0;
+
+  tempoRimasto = 5;
+  text.textContent = tempoRimasto;
+
+  // cancella un eventuale timer precedente
+  clearInterval(timerInterval);
+
+  timerInterval = setInterval(() => {
+    tempoRimasto--;
+    text.textContent = tempoRimasto;
+
+    // calcolo animazione cerchio
+    const offset = circonferenza - (tempoRimasto / 45) * circonferenza;
+    circle.style.strokeDashoffset = offset;
+
+    if (tempoRimasto <= 0) {
+      clearInterval(timerInterval);
+      risposteDate.push("errore"); // nessuna risposta data
+      indice++;
+
+      if (indice >= questions.length) {
+        inviaBtn.style.display = "block";
+        opzioniEl.innerHTML = "";
+        domandaEl.textContent = "Hai risposto a tutte le domande!";
+        contatoreDomande.textContent = `${questions.length}/${questions.length}`;
+        return;
+      }
+      mostraDomanda();
+    }
+  }, 1000);
 }
 
 // Elementi HTML
-const quizContainer = document.getElementById("quiz-container")
-const domandaEl = document.getElementById("domanda")
-const opzioniEl = document.getElementById("opzioni")
-const contatoreDomande = document.getElementById("contatore-domande")
+const quizContainer = document.getElementById("quiz-container");
+const domandaEl = document.getElementById("domanda");
+const opzioniEl = document.getElementById("opzioni");
+const contatoreDomande = document.getElementById("contatore-domande");
 
 // Bottone "invia risposte" (alla fine)
-const inviaBtn = document.createElement("button")
-inviaBtn.textContent = "Invia Risposte"
-inviaBtn.style.display = "none"
+const inviaBtn = document.createElement("button");
+inviaBtn.textContent = "Invia Risposte";
+inviaBtn.style.display = "none";
 inviaBtn.onclick = () => {
-  alert("Quiz completato!")
-  console.log("Risposte date:", risposteDate)
-  valutaRisposte()
-}
-quizContainer.appendChild(inviaBtn)
+  alert("Quiz completato!");
+  console.log("Risposte date:", risposteDate);
+  valutaRisposte();
+};
+quizContainer.appendChild(inviaBtn);
 
 // Funzione per mostrare la domanda corrente
 function mostraDomanda() {
+  avviaTimer();
   // se siamo alla fine, non mostrare più domande
-  if (indice >= questions.length) return
+  if (indice >= questions.length) return;
 
-  const domanda = questions[indice]
+  const domanda = questions[indice];
 
   // mostra il testo domanda
-  domandaEl.textContent = domanda.question
+  domandaEl.textContent = domanda.question;
 
   // pulisci le opzioni precedenti
-  opzioniEl.innerHTML = ""
+  opzioniEl.innerHTML = "";
 
   // crea array di tutte le opzioni (corretta + sbagliate) e mescola
   const tutteLeOpzioni = [
     domanda.correct_answer,
     ...domanda.incorrect_answers,
-  ].sort(() => Math.random() - 0.5)
+  ].sort(() => Math.random() - 0.5);
 
   // crea i bottoni per ciascuna opzione
   tutteLeOpzioni.forEach((opzione) => {
-    const btn = document.createElement("button")
-    btn.textContent = opzione
-    btn.type = "button"
+    const btn = document.createElement("button");
+    btn.textContent = opzione;
+    btn.type = "button";
 
     btn.onclick = () => {
       // salva risposta cliccata
-      risposteDate.push(opzione)
-
+      risposteDate.push(opzione);
+      clearInterval(timerInterval);
       // passa alla prossima domanda
-      indice++
+      indice++;
 
       // se è l'ultima domanda, mostra il bottone "Invia"
       if (indice === questions.length) {
-        inviaBtn.style.display = "block"
-        opzioniEl.innerHTML = "" // rimuovi bottoni
-        domandaEl.textContent = "Hai risposto a tutte le domande!"
-        contatoreDomande.textContent = `${questions.length}/${questions.length}`
-        return
+        inviaBtn.style.display = "block";
+        opzioniEl.innerHTML = ""; // rimuovi bottoni
+        domandaEl.textContent = "Hai risposto a tutte le domande!";
+        contatoreDomande.textContent = `${questions.length}/${questions.length}`;
+        return;
       }
 
       // altrimenti mostra la prossima domanda
-      mostraDomanda()
-    }
+      mostraDomanda();
+    };
 
-    opzioniEl.appendChild(btn)
-  })
+    opzioniEl.appendChild(btn);
+  });
 
   // aggiorna contatore domanda
-  contatoreDomande.textContent = `${indice + 1}/${questions.length}`
+  contatoreDomande.textContent = `${indice + 1}/${questions.length}`;
 }
 
 // Avvio quiz all'apertura pagina
-window.onload = mostraDomanda
+window.onload = mostraDomanda;
