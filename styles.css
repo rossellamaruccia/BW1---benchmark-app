@@ -114,6 +114,15 @@ label {
   width: 3.8em;
 }
 
+#rating-stars img.hovered,
+#rating-stars img.selected {
+  background-color: gold;
+  padding: 3px;
+  /* VERSIONE CSS AVANZATO */
+  /* filter: brightness(1.2) saturate(1.4) sepia(1) hue-rotate(10deg) saturate(4)
+    brightness(1.1); */
+}
+
 #comment {
   display: inline-block;
   width: 100%;
