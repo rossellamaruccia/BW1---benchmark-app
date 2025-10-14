@@ -17,5 +17,6 @@ stars.forEach((star, index) => {
     selected = index
     stars.forEach((s) => s.classList.remove("selected"))
     for (let i = 0; i <= selected; i++) stars[i].classList.add("selected")
+    console.log(selected + 1)
   })
 })
