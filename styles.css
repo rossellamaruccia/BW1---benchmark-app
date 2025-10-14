@@ -12,16 +12,14 @@ header {
   padding-left: 5em;
 }
 
-footer{
-    padding-left: 5em;
-    padding-bottom: 2em;
-
+footer {
+  padding-left: 5em;
+  padding-bottom: 2em;
 }
 
 .logo {
   width: 200px;
 }
-
 
 #welcome_page {
   text-align: left;
@@ -34,14 +32,14 @@ h1 {
   font-size: 60px;
 }
 
-h2{
+h2 {
   font-size: 50px;
   font-weight: 700;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
-h3{
-  font-family: 'Outfit', sans-serif;
+h3 {
+  font-family: "Outfit", sans-serif;
   font-size: 2em;
   font-weight: normal;
   margin: auto;
@@ -95,7 +93,7 @@ label {
   font-size: 2.2em;
 } */
 
-#feedback-page{
+#feedback-page {
   display: block;
   width: 100%;
   text-align: center;
@@ -145,9 +143,7 @@ label {
 
 /* #comment input:hover {
   font-size: 1.8em;
-}
-
-
+} */
 .titResults {
   text-align: center;
   font-size: 50px;
