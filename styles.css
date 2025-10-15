@@ -211,10 +211,9 @@ label {
   margin: 0 auto;
   font-weight: bold;
   font-size: 20px;
-  color: white;
+  color: #ffffff;
   background-color: transparent;
-  border: white solid 2px;
-  margin-top: 5em;
+  border: rgb(255, 255, 255) solid 2px;
   box-shadow: none;
   padding: 18px 68px;
 }
@@ -223,4 +222,46 @@ label {
   background-color: #00ffff;
   color: #0b1d45;
   cursor: pointer;
+}
+
+.progress-circle {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+/* Cerchio di sfondo */
+.progress-ring-background {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 15;
+}
+
+/* Parte delle risposte sbagliate */
+.progress-ring-wrong {
+  fill: none;
+  stroke: #d20094;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+}
+
+/* Parte delle risposte corrette */
+.progress-ring-correct {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 0.5s ease;
 }
