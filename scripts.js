@@ -163,14 +163,10 @@ const contatoreDomande = document.getElementById("contatore-domande");
 
 // Bottone "invia risposte" (alla fine)
 const inviaBtn = document.createElement("button");
-inviaBtn.textContent = "Invia Risposte";
+inviaBtn.textContent = "send answers";
 inviaBtn.style.display = "none";
 inviaBtn.onclick = () => {
-  alert("Quiz completato!");
-  console.log("Risposte date:", risposteDate);
-  valutaRisposte();
-  console.log(valutaRisposte());
-  window.location.href = "results_page.html";
+ window.location.href = "results_page.html"
 };
 quizContainer.appendChild(inviaBtn);
 
@@ -230,10 +226,10 @@ function mostraDomanda() {
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
 
-const percentDiv = document.getElementById('percentualeC')
 
+//create a var available in the next page
 localStorage.setItem("risposteCorrette", valutaRisposte())
 
-const corrette = parseInt('risposteCorrette')
 
-percentDiv.textContent = `${corrette*10} %`
+
+
