@@ -98,6 +98,7 @@ const questions = [
 ];
 
 //Variabili
+const timeWrapper = document.getElementById("timer-wrapper");
 let indice = 0; // indice della domanda corrente
 const risposteDate = []; // array per salvare le risposte
 // Funzione esterna che ritorna il numero di risposte corrette
@@ -108,10 +109,6 @@ function calcolaRisultato(risposteDate, questions) {
   }, 0);
 }
 
-
-
-
-
 let valutaRisposte = () => {
   // Array delle risposte corrette
   const risposteCorrette = questions.map((q) => q.correct_answer);
@@ -120,8 +117,8 @@ let valutaRisposte = () => {
     return count + (risposta === risposteCorrette[i] ? 1 : 0);
   }, 0);
   // Salva il numero di risposte corrette in una variabile globale
-  return window.numeroRisposteCorrette = numeroCorrette;
-}
+  return (window.numeroRisposteCorrette = numeroCorrette);
+};
 
 let tempoRimasto = 5;
 let timerInterval = null;
@@ -150,15 +147,16 @@ function avviaTimer() {
     circle.style.strokeDashoffset = offset;
 
     if (tempoRimasto <= 0) {
-      clearInterval(timerInterval);
       risposteDate.push("errore"); // nessuna risposta data
+      clearInterval(timerInterval);
       indice++;
 
       if (indice >= questions.length) {
         inviaBtn.style.display = "block";
+        timeWrapper.style.display = "none";
         opzioniEl.innerHTML = "";
         domandaEl.textContent = "Hai risposto a tutte le domande!";
-        contatoreDomande.textContent = `${questions.length}/${questions.length}`;
+        contatoreDomande.textContent = `${questions.length}`;
         return;
       }
       mostraDomanda();
@@ -178,7 +176,7 @@ inviaBtn.id = "invia-risposte";
 inviaBtn.textContent = "Invia Risposte";
 inviaBtn.style.display = "none";
 inviaBtn.onclick = () => {
- window.location.href = "results_page.html"
+  window.location.href = "results_page.html";
 };
 quizContainer.appendChild(inviaBtn);
 
@@ -220,10 +218,12 @@ function mostraDomanda() {
         inviaBtn.style.display = "block";
         opzioniEl.innerHTML = ""; // rimuovi bottoni
         domandaEl.textContent = "Hai risposto a tutte le domande!";
-        contatoreDomande.textContent = `${questions.length}/${questions.length}`;
-        
+        contatoreDomande.textContent = `${questions.length}`;
+        timeWrapper.style.display = "none";
+
         // Dopo il quiz, puoi fare:
-const risultatoFinale = calcolaRisultato(risposteDate, questions);
+        clearInterval(risultatoFinale);
+        const risultatoFinale = calcolaRisultato(risposteDate, questions);
         console.log("Numero risposte corrette:", risultatoFinale);
         localStorage.setItem("risposteCorrette", risultatoFinale);
         return;
@@ -237,7 +237,7 @@ const risultatoFinale = calcolaRisultato(risposteDate, questions);
   });
 
   // aggiorna contatore domanda
-  contatoreDomande.textContent = `${indice + 1}/${questions.length}`;
+  contatoreDomande.textContent = `${indice + 1}`;
 }
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
