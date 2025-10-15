@@ -10,6 +10,7 @@ header {
   text-align: left;
   padding-top: 2em;
   padding-left: 5em;
+  display: inline-block;
 }
 
 footer {
@@ -19,6 +20,11 @@ footer {
 
 .logo {
   width: 200px;
+}
+
+#timer-wrapper{
+display: inline;
+padding-left: 80%;
 }
 
 #welcome_page {
@@ -33,9 +39,11 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
-  font-weight: 700;
   font-family: "Outfit", sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  max-width: 60%;
+  margin: auto;
 }
 
 h3 {
@@ -45,6 +53,7 @@ h3 {
   margin: auto;
   max-width: 50%;
 }
+
 
 h5 {
   font-family: "Outfit", sans-serif;

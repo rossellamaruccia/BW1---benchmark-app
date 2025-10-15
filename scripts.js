@@ -101,7 +101,7 @@ const questions = [
 let indice = 0; // indice della domanda corrente
 const risposteDate = []; // array per salvare le risposte
 
-function valutaRisposte() {
+let valutaRisposte = () => {
   // Array delle risposte corrette
   const risposteCorrette = questions.map((q) => q.correct_answer);
   // Confronta risposteDate con risposteCorrette e conta quante sono corrette
@@ -109,7 +109,7 @@ function valutaRisposte() {
     return count + (risposta === risposteCorrette[i] ? 1 : 0);
   }, 0);
   // Salva il numero di risposte corrette in una variabile globale
-  window.numeroRisposteCorrette = numeroCorrette;
+  return window.numeroRisposteCorrette = numeroCorrette;
 }
 
 let tempoRimasto = 5;
@@ -169,6 +169,7 @@ inviaBtn.onclick = () => {
   alert("Quiz completato!");
   console.log("Risposte date:", risposteDate);
   valutaRisposte();
+  console.log(valutaRisposte());
   window.location.href = "results_page.html";
 };
 quizContainer.appendChild(inviaBtn);
@@ -228,3 +229,11 @@ function mostraDomanda() {
 
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
+
+const percentDiv = document.getElementById('percentualeC')
+
+localStorage.setItem("risposteCorrette", valutaRisposte())
+
+const corrette = parseInt('risposteCorrette')
+
+percentDiv.textContent = `${corrette*10} %`
