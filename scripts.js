@@ -100,6 +100,17 @@ const questions = [
 //Variabili
 let indice = 0; // indice della domanda corrente
 const risposteDate = []; // array per salvare le risposte
+// Funzione esterna che ritorna il numero di risposte corrette
+function calcolaRisultato(risposteDate, questions) {
+  const risposteCorrette = questions.map((q) => q.correct_answer);
+  return risposteDate.reduce((count, risposta, i) => {
+    return count + (risposta === risposteCorrette[i] ? 1 : 0);
+  }, 0);
+}
+
+
+
+
 
 function valutaRisposte() {
   // Array delle risposte corrette
@@ -213,6 +224,10 @@ function mostraDomanda() {
         opzioniEl.innerHTML = ""; // rimuovi bottoni
         domandaEl.textContent = "Hai risposto a tutte le domande!";
         contatoreDomande.textContent = `${questions.length}/${questions.length}`;
+        
+        // Dopo il quiz, puoi fare:
+const risultatoFinale = calcolaRisultato(risposteDate, questions);
+console.log("Numero risposte corrette:", risultatoFinale);
         return;
       }
 
@@ -226,6 +241,6 @@ function mostraDomanda() {
   // aggiorna contatore domanda
   contatoreDomande.textContent = `${indice + 1}/${questions.length}`;
 }
-
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
+
