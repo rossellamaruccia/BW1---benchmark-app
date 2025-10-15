@@ -224,7 +224,8 @@ function mostraDomanda() {
         
         // Dopo il quiz, puoi fare:
 const risultatoFinale = calcolaRisultato(risposteDate, questions);
-console.log("Numero risposte corrette:", risultatoFinale);
+        console.log("Numero risposte corrette:", risultatoFinale);
+        localStorage.setItem("risposteCorrette", risultatoFinale);
         return;
       }
 
@@ -240,14 +241,3 @@ console.log("Numero risposte corrette:", risultatoFinale);
 }
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
-
-<<<<<<< HEAD
-
-//create a var available in the next page
-localStorage.setItem("risposteCorrette", valutaRisposte())
-
-
-
-
-=======
->>>>>>> Lorenzo-pag.2
