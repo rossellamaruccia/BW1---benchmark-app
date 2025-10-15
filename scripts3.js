@@ -12,3 +12,17 @@ Button.addEventListener("click", function () {
   window.location.href = "feedback_page.html";
 });
 Button.style.cursor = "pointer";
+
+const circleText = document.getElementById("circle-progress-text")
+
+const inserisciTesto = () => {
+if (parseInt(localStorage.getItem("risposteCorrette")) >= 6) {
+  let text = "test superato"
+} else {
+  let text = "test non superato"
+  }
+  return circleText.innerText = text
+  
+}
+
+inserisciTesto()

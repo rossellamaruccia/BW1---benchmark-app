@@ -325,3 +325,34 @@ label {
   transform: scale(1.05);           /* effetto hover */
 }
 
+/* Cerchio di sfondo */
+.progress-ring-background {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 15;
+}
+
+/* Parte delle risposte sbagliate */
+.progress-ring-wrong {
+  fill: none;
+  stroke: #d20094;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+}
+
+/* Parte delle risposte corrette */
+.progress-ring-correct {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 0.5s ease;
+}
