@@ -163,12 +163,8 @@ const contatoreDomande = document.getElementById("contatore-domande");
 
 // Bottone "invia risposte" (alla fine)
 const inviaBtn = document.createElement("button");
-<<<<<<< HEAD
-inviaBtn.textContent = "send answers";
-=======
 inviaBtn.id = "invia-risposte";
 inviaBtn.textContent = "Invia Risposte";
->>>>>>> 4d58ab77746ecd12789dbce01320c31e1ef17390
 inviaBtn.style.display = "none";
 inviaBtn.onclick = () => {
  window.location.href = "results_page.html"
