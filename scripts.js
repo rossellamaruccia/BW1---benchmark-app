@@ -157,6 +157,9 @@ function avviaTimer() {
         opzioniEl.innerHTML = "";
         domandaEl.textContent = "Hai risposto a tutte le domande!";
         contatoreDomande.textContent = `${questions.length}`;
+        const risultatoFinale = calcolaRisultato(risposteDate, questions);
+        console.log("Numero risposte corrette:", risultatoFinale);
+        localStorage.setItem("risposteCorrette", risultatoFinale);
         return;
       }
       mostraDomanda();
@@ -222,7 +225,7 @@ function mostraDomanda() {
         timeWrapper.style.display = "none";
 
         // Dopo il quiz, puoi fare:
-        clearInterval(risultatoFinale);
+        
         const risultatoFinale = calcolaRisultato(risposteDate, questions);
         console.log("Numero risposte corrette:", risultatoFinale);
         localStorage.setItem("risposteCorrette", risultatoFinale);
