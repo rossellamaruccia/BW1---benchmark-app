@@ -1,3 +1,15 @@
+const percentDiv = document.getElementById("percentualeC")
+
+percentDiv.innerHTML = `<h2>${
+  parseInt(localStorage.getItem("risposteCorrette")) * 10
+}%</h2><p>${localStorage.getItem("risposteCorrette")}/10 questions</p>`
+
+const wrongPercent = document.getElementById("percentualeW")
+
+wrongPercent.innerHTML = `<h2>${
+  100 - parseInt(localStorage.getItem("risposteCorrette")) * 10
+}%</h2><p>${10 - localStorage.getItem("risposteCorrette")}/10 questions</p>`
+
 // bottone che porta alla pagina di feedback
 const Button = document.getElementById("rateUs")
 Button.addEventListener("click", function () {
@@ -6,7 +18,6 @@ Button.addEventListener("click", function () {
 Button.style.cursor = "pointer"
 
 // CERCHIO PER RISULTATO
-
 const circleResult = () => {
   const correct = parseInt(localStorage.getItem("risposteCorrette"))
   const correctCircle = document.querySelector(".progress-ring-correct")
@@ -34,10 +45,12 @@ const circleResult = () => {
   const inserisciTesto = () => {
     let text = ""
     if (correct >= 6) {
-      text = "test superato"
+      text =
+        "Congratulations! You passed the exam. We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)"
     } else {
-      text = "test non superato"
+      text = "Sorry! You didn't pass the exam."
     }
+
     return (circleText.textContent = text)
   }
   inserisciTesto()
