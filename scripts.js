@@ -19,7 +19,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesnt get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -163,6 +163,7 @@ const contatoreDomande = document.getElementById("contatore-domande");
 
 // Bottone "invia risposte" (alla fine)
 const inviaBtn = document.createElement("button");
+inviaBtn.id = "invia-risposte";
 inviaBtn.textContent = "Invia Risposte";
 inviaBtn.style.display = "none";
 inviaBtn.onclick = () => {

@@ -16,8 +16,6 @@
   <body>
     <header>
       <img src="./assets/epicode_logo.png" alt="logo" class="logo" />
-    </header>
-    <main>
       <div id="timer-wrapper">
         <svg width="160" height="160">
           <circle
@@ -40,20 +38,44 @@
             stroke-dasharray="440"
             stroke-dashoffset="0"
           ></circle>
+          <!-- Testo centrale -->
           <text
             id="timer-text"
-            x="80"
-            y="90"
+            x="50%"
+            y="50%"
             text-anchor="middle"
-            font-size="24"
-            fill="#333"
+            dominant-baseline="middle"
+            font-size="32"
+            fill="#fff"
           >
-            45
+            5
+          </text>
+          <!-- Sopra -->
+          <text
+            id="timer-text-top"
+            x="50%"
+            y="35%"
+            text-anchor="middle"
+            font-size="12"
+            fill="#fff"
+          >
+            SECONDI
+          </text>
+          <!-- Sotto -->
+          <text
+            id="timer-text-bottom"
+            x="50%"
+            y="65%"
+            text-anchor="middle"
+            font-size="12"
+            fill="#fff"
+          >
+            RIMANENTI
           </text>
         </svg>
       </div>
-      <!-- <h1>Quiz</h1> -->
-
+    </header>
+    <main>
       <!-- CONTENITORE DEL QUIZ -->
       <div id="quiz-container">
         <h2 id="domanda"></h2>
