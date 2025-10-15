@@ -263,7 +263,12 @@ label {
   flex-direction: column;
   align-items: center; /* centra orizzontalmente */
   justify-content: center; /* centra verticalmente */
+<<<<<<< HEAD
   min-height: 70vh; /* lascia spazio sopra e sotto per header e footer */
+=======
+  min-height: 70vh; /* lascia spazio sopra e sotto per header e footer
+ */
+>>>>>>> main
 }
 
 /* CONTENITORE OPZIONI */
@@ -312,7 +317,11 @@ label {
 #quiz-container button#invia-risposte {
   width: 25vw; /* larghezza proporzionale allo schermo */
   height: 12vh; /* altezza proporzionale */
+<<<<<<< HEAD
   background-color: #00bfff;
+=======
+  background-color: #a50083;
+>>>>>>> main
   color: #fff; /* testo bianco */
   font-size: 2vh; /* testo scalabile */
   font-weight: bold;
@@ -324,6 +333,7 @@ label {
 }
 
 #quiz-container button#invia-risposte:hover {
+<<<<<<< HEAD
   background-color: #0099cc; /* leggero scurimento al passaggio del mouse */
   transform: scale(1.05); /* effetto hover */
 }
@@ -359,3 +369,25 @@ label {
   stroke-dashoffset: 377;
   transition: stroke-dashoffset 0.5s ease;
 }
+=======
+  background-color: #a50083; /* leggero scurimento al passaggio del mouse */
+  transform: scale(1.05); /* effetto hover */
+}
+
+#contenitoreDomanda {
+  text-align: center;
+  margin-top: 5vh;
+}
+#quiz-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  padding: 0;
+}
+#contatore-domande {
+  color: #a50083;
+}
+>>>>>>> main
