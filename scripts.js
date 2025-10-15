@@ -228,10 +228,7 @@ function mostraDomanda() {
         timeWrapper.style.display = "none";
 
         // Dopo il quiz, puoi fare:
-<<<<<<< HEAD
         
-=======
->>>>>>> cae356b9039a336dcb7f60b7d4272bdb453fac28
         const risultatoFinale = calcolaRisultato(risposteDate, questions);
         console.log("Numero risposte corrette:", risultatoFinale);
         localStorage.setItem("risposteCorrette", risultatoFinale);
