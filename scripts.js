@@ -98,7 +98,6 @@ const questions = [
 ];
 
 //Variabili
-const timeWrapper = document.getElementById("timer-wrapper");
 let indice = 0; // indice della domanda corrente
 const risposteDate = []; // array per salvare le risposte
 // Funzione esterna che ritorna il numero di risposte corrette
@@ -147,16 +146,15 @@ function avviaTimer() {
     circle.style.strokeDashoffset = offset;
 
     if (tempoRimasto <= 0) {
-      risposteDate.push("errore"); // nessuna risposta data
       clearInterval(timerInterval);
+      risposteDate.push("errore"); // nessuna risposta data
       indice++;
 
       if (indice >= questions.length) {
         inviaBtn.style.display = "block";
-        timeWrapper.style.display = "none";
         opzioniEl.innerHTML = "";
         domandaEl.textContent = "Hai risposto a tutte le domande!";
-        contatoreDomande.textContent = `${questions.length}`;
+        contatoreDomande.textContent = `${questions.length}/${questions.length}`;
         return;
       }
       mostraDomanda();
@@ -218,11 +216,9 @@ function mostraDomanda() {
         inviaBtn.style.display = "block";
         opzioniEl.innerHTML = ""; // rimuovi bottoni
         domandaEl.textContent = "Hai risposto a tutte le domande!";
-        contatoreDomande.textContent = `${questions.length}`;
-        timeWrapper.style.display = "none";
+        contatoreDomande.textContent = `${questions.length}/${questions.length}`;
 
         // Dopo il quiz, puoi fare:
-        clearInterval(risultatoFinale);
         const risultatoFinale = calcolaRisultato(risposteDate, questions);
         console.log("Numero risposte corrette:", risultatoFinale);
         localStorage.setItem("risposteCorrette", risultatoFinale);
@@ -237,7 +233,11 @@ function mostraDomanda() {
   });
 
   // aggiorna contatore domanda
-  contatoreDomande.textContent = `${indice + 1}`;
+  contatoreDomande.textContent = `${indice + 1}/${questions.length}`;
+  const risultatoFinale = calcolaRisultato(risposteDate, questions);
+  console.log("Numero risposte corrette:", risultatoFinale);
+  localStorage.setItem("risposteCorrette", risultatoFinale);
+  return;
 }
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
