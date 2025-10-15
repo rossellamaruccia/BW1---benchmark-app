@@ -244,3 +244,13 @@ console.log("Numero risposte corrette:", risultatoFinale);
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda;
 
+<<<<<<< Updated upstream
+=======
+
+//create a var available in the next page
+localStorage.setItem("risposteCorrette", valutaRisposte())
+
+
+
+
+>>>>>>> Stashed changes
