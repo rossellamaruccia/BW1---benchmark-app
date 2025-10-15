@@ -1,24 +1,4 @@
-const percentDiv = document.getElementById('percentualeC')
-
-percentDiv.innerHTML = `<h2>${parseInt(localStorage.getItem("risposteCorrette")) * 10}%</h2><p>${localStorage.getItem("risposteCorrette")}/10 questions</p>`
-
-const wrongPercent = document.getElementById('percentualeW')
-
-wrongPercent.innerHTML = `<h2>${100 - (parseInt(localStorage.getItem("risposteCorrette")) * 10)}%</h2><p>${10 - (localStorage.getItem("risposteCorrette"))}/10 questions</p>`
-
 // bottone che porta alla pagina di feedback
-const percentDiv = document.getElementById("percentualeC")
-
-percentDiv.innerHTML = `<h2>${
-  parseInt(localStorage.getItem("risposteCorrette")) * 10
-}%</h2><p>${localStorage.getItem("risposteCorrette")}/10 questions</p>`
-
-const wrongPercent = document.getElementById("percentualeW")
-
-wrongPercent.innerHTML = `<h2>${
-  100 - parseInt(localStorage.getItem("risposteCorrette")) * 10
-}%</h2><p>${10 - localStorage.getItem("risposteCorrette")}/10 questions</p>`
-
 const Button = document.getElementById("rateUs")
 Button.addEventListener("click", function () {
   window.location.href = "feedback_page.html"
@@ -49,15 +29,3 @@ const circleResult = (correct, total) => {
   correctCircle.style.strokeDashoffset = -wrongLen
 }
 circleResult(2, 10)
-
-const circleText = () => {
-  let text = document.getElementById("circle-progress-text")
-  console.log()
-  if (parseInt(localStorage.getItem("risposteCorrette")) >= 6) {
-    text.innerText = "Test superato"
-  } else {
-    text.innerText = "test non superato"
-  }
-  console.log()
-}
-circleText()
