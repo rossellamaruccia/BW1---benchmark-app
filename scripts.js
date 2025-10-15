@@ -150,6 +150,12 @@ function avviaTimer() {
       risposteDate.push("errore") // nessuna risposta data
       clearInterval(timerInterval)
       indice++
+      risposteDate.push("errore") // nessuna risposta data
+      const risultatoFinale = calcolaRisultato(risposteDate, questions)
+      console.log("Numero risposte corrette:", risultatoFinale)
+      localStorage.setItem("risposteCorrette", risultatoFinale)
+      clearInterval(timerInterval)
+      indice++
 
       if (indice >= questions.length) {
         inviaBtn.style.display = "block"
@@ -158,7 +164,6 @@ function avviaTimer() {
         domandaEl.textContent = "Hai risposto a tutte le domande!"
         contatoreDomande.textContent = `${questions.length}`
         return
-        localStorage.setItem("risposteCorrette", risultatoFinale)
       }
 
       mostraDomanda()
