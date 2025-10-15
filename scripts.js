@@ -19,7 +19,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesnt get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -100,8 +100,15 @@ const questions = [
 //Variabili
 let indice = 0 // indice della domanda corrente
 const risposteDate = [] // array per salvare le risposte
+// Funzione esterna che ritorna il numero di risposte corrette
+function calcolaRisultato(risposteDate, questions) {
+  const risposteCorrette = questions.map((q) => q.correct_answer)
+  return risposteDate.reduce((count, risposta, i) => {
+    return count + (risposta === risposteCorrette[i] ? 1 : 0)
+  }, 0)
+}
 
-function valutaRisposte() {
+let valutaRisposte = () => {
   // Array delle risposte corrette
   const risposteCorrette = questions.map((q) => q.correct_answer)
   // Confronta risposteDate con risposteCorrette e conta quante sono corrette
@@ -109,7 +116,7 @@ function valutaRisposte() {
     return count + (risposta === risposteCorrette[i] ? 1 : 0)
   }, 0)
   // Salva il numero di risposte corrette in una variabile globale
-  window.numeroRisposteCorrette = numeroCorrette
+  return (window.numeroRisposteCorrette = numeroCorrette)
 }
 
 let tempoRimasto = 5
@@ -163,12 +170,10 @@ const contatoreDomande = document.getElementById("contatore-domande")
 
 // Bottone "invia risposte" (alla fine)
 const inviaBtn = document.createElement("button")
+inviaBtn.id = "invia-risposte"
 inviaBtn.textContent = "Invia Risposte"
 inviaBtn.style.display = "none"
 inviaBtn.onclick = () => {
-  alert("Quiz completato!")
-  console.log("Risposte date:", risposteDate)
-  valutaRisposte()
   window.location.href = "results_page.html"
 }
 quizContainer.appendChild(inviaBtn)
@@ -212,6 +217,11 @@ function mostraDomanda() {
         opzioniEl.innerHTML = "" // rimuovi bottoni
         domandaEl.textContent = "Hai risposto a tutte le domande!"
         contatoreDomande.textContent = `${questions.length}/${questions.length}`
+
+        // Dopo il quiz, puoi fare:
+        const risultatoFinale = calcolaRisultato(risposteDate, questions)
+        console.log("Numero risposte corrette:", risultatoFinale)
+        localStorage.setItem("risposteCorrette", risultatoFinale)
         return
       }
 
@@ -229,6 +239,5 @@ function mostraDomanda() {
   localStorage.setItem("risposteCorrette", risultatoFinale)
   return
 }
-
 // Avvio quiz all'apertura pagina
 window.onload = mostraDomanda
