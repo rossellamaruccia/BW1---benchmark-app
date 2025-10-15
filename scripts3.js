@@ -24,7 +24,7 @@ const circleResult = () => {
   const wrongCircle = document.querySelector(".progress-ring-wrong")
 
   // calcolo circonferenza
-  const raggio = 300
+  const raggio = 180
   const circonferenza = 2 * Math.PI * raggio
 
   const correctPercent = correct / 10
