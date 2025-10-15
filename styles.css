@@ -288,3 +288,65 @@ label {
   stroke-dashoffset: 377;
   transition: stroke-dashoffset 0.5s ease;
 }
+
+/* DOMANDA H1 */
+#domanda {
+  color: #fff;
+  font-size: 2.8rem; /* testo */
+  text-align: center;
+  margin-bottom: 1.5rem; /* piccolo spazio sotto la domanda */
+}
+
+/*fino a qui tutto bene 2*/
+
+/* BOTTONE INVIA RISPOSTE - RETTANGOLARE CON VW/VH */
+#quiz-container button#invia-risposte {
+  width: 25vw; /* larghezza proporzionale allo schermo */
+  height: 12vh; /* altezza proporzionale */
+  background-color: #00bfff;
+  color: #fff; /* testo bianco */
+  font-size: 2vh; /* testo scalabile */
+  font-weight: bold;
+  border: none;
+  border-radius: 2vh; /* angoli arrotondati proporzionali */
+  cursor: pointer;
+  margin-top: 2vh; /* distanza dal blocco delle opzioni */
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#quiz-container button#invia-risposte:hover {
+  background-color: #0099cc; /* leggero scurimento al passaggio del mouse */
+  transform: scale(1.05); /* effetto hover */
+}
+
+/* Cerchio di sfondo */
+.progress-ring-background {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 15;
+}
+
+/* Parte delle risposte sbagliate */
+.progress-ring-wrong {
+  fill: none;
+  stroke: #d20094;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+}
+
+/* Parte delle risposte corrette */
+.progress-ring-correct {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 0.5s ease;
+}
