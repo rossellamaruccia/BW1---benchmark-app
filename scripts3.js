@@ -7,7 +7,8 @@ Button.style.cursor = "pointer"
 
 // CERCHIO PER RISULTATO
 
-const circleResult = (correct, total) => {
+const circleResult = () => {
+  const correct = parseInt(localStorage.getItem("risposteCorrette"))
   const correctCircle = document.querySelector(".progress-ring-correct")
   const wrongCircle = document.querySelector(".progress-ring-wrong")
 
@@ -15,7 +16,7 @@ const circleResult = (correct, total) => {
   const raggio = 300
   const circonferenza = 2 * Math.PI * raggio
 
-  const correctPercent = correct / total
+  const correctPercent = correct / 10
   const wrongPercent = 1 - correctPercent
 
   const correctLen = circonferenza * correctPercent
@@ -27,20 +28,18 @@ const circleResult = (correct, total) => {
 
   wrongCircle.style.strokeDashoffset = 0
   correctCircle.style.strokeDashoffset = -wrongLen
-}
-circleResult(2, 10)
-window.location.href = "feedback_page.html"
-Button.style.cursor = "pointer"
 
-const circleText = document.getElementById("circle-progress-text")
+  const circleText = document.getElementById("circle-progress-text")
 
-const inserisciTesto = () => {
-  if (parseInt(localStorage.getItem("risposteCorrette")) >= 6) {
-    let text = "test superato"
-  } else {
-    let text = "test non superato"
+  const inserisciTesto = () => {
+    let text = ""
+    if (correct >= 6) {
+      text = "test superato"
+    } else {
+      text = "test non superato"
+    }
+    return (circleText.textContent = text)
   }
-  return (circleText.innerText = text)
+  inserisciTesto()
 }
-
-inserisciTesto()
+circleResult()

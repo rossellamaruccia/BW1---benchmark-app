@@ -323,15 +323,15 @@ label {
 .progress-ring-background {
   fill: none;
   stroke: #e0e0e0;
-  stroke-width: 15;
+  stroke-width: 40;
 }
 
 /* Parte delle risposte sbagliate */
 .progress-ring-wrong {
   fill: none;
   stroke: #d20094;
-  stroke-width: 12;
-  stroke-linecap: round;
+  stroke-width: 40;
+  stroke-linecap: butt;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke-dasharray: 377;
@@ -342,8 +342,8 @@ label {
 .progress-ring-correct {
   fill: none;
   stroke: #00ffff;
-  stroke-width: 12;
-  stroke-linecap: round;
+  stroke-width: 40;
+  stroke-linecap: butt;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke-dasharray: 377;
