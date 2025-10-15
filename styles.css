@@ -359,6 +359,8 @@ label {
   stroke-dasharray: 377;
   stroke-dashoffset: 377;
   transition: stroke-dashoffset 0.5s ease;
+}
+
 #contenitoreDomanda {
   text-align: center;
   margin-top: 5vh;
