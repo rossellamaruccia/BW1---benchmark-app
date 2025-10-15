@@ -219,9 +219,10 @@ label {
   margin: 0 auto;
   font-weight: bold;
   font-size: 20px;
-  color: #ffffff;
+  color: white;
   background-color: transparent;
-  border: rgb(255, 255, 255) solid 2px;
+  border: white solid 2px;
+  margin-top: 5em;
   box-shadow: none;
   padding: 18px 68px;
 }
@@ -232,9 +233,17 @@ label {
   cursor: pointer;
 }
 
-.progress-circle {
-  position: relative;
-  width: 40%;
+/*CSS PAGINA 2 */
+#timer-wrapper {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 160px;
+  height: 160px;
+}
+
+#timer-wrapper svg {
+  width: 100%;
   height: 100%;
 }
 
@@ -254,39 +263,40 @@ label {
   flex-direction: column;
   align-items: center; /* centra orizzontalmente */
   justify-content: center; /* centra verticalmente */
-  min-height: 70vh; /* lascia spazio sopra e sotto per header e footer */
+  min-height: 70vh; /* lascia spazio sopra e sotto per header e footer
+ */
 }
 
-/* Cerchio di sfondo */
-.progress-ring-background {
-  fill: none;
-  stroke: #e0e0e0;
-  stroke-width: 15;
+/* CONTENITORE OPZIONI */
+#opzioni {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* due bottoni per riga */
+  gap: 1rem 1.5rem; /* 1rem verticale, 1.5rem orizzontale tra colonne */
+  justify-items: center; /* centra i bottoni nella colonna */
+  margin-top: 2rem; /* distanza dalla domanda */
 }
 
-/* Parte delle risposte sbagliate */
-.progress-ring-wrong {
-  fill: none;
-  stroke: #d20094;
-  stroke-width: 12;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
+/* BOTTONI DELLE OPZIONI */
+#opzioni button {
+  width: 200px; /* bottoni grandi */
+  padding: 1.5rem 0; /* maggiore altezza tra i bottoni */
+  border-radius: 16px; /* angoli arrotondati */
+  background-color: rgba(
+    0,
+    40,
+    80,
+    0.85
+  ); /* blu scuro semi-trasparente, da trovare migliore colore */
+  color: #fff; /* testo bianco */
+  font-size: 1.5rem; /* testo grande */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Parte delle risposte corrette */
-.progress-ring-correct {
-  fill: none;
-  stroke: #00ffff;
-  stroke-width: 12;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-  transition: stroke-dashoffset 0.5s ease;
+#opzioni button:hover {
+  background-color: rgba(0, 60, 120, 0.95);
+  transform: scale(1.05); /* effetto hover */
 }
 
 /* DOMANDA H1 */
@@ -303,7 +313,7 @@ label {
 #quiz-container button#invia-risposte {
   width: 25vw; /* larghezza proporzionale allo schermo */
   height: 12vh; /* altezza proporzionale */
-  background-color: #00bfff;
+  background-color: #a50083;
   color: #fff; /* testo bianco */
   font-size: 2vh; /* testo scalabile */
   font-weight: bold;
@@ -315,38 +325,23 @@ label {
 }
 
 #quiz-container button#invia-risposte:hover {
-  background-color: #0099cc; /* leggero scurimento al passaggio del mouse */
+  background-color: #a50083; /* leggero scurimento al passaggio del mouse */
   transform: scale(1.05); /* effetto hover */
 }
 
-/* Cerchio di sfondo */
-.progress-ring-background {
-  fill: none;
-  stroke: #e0e0e0;
-  stroke-width: 15;
+#contenitoreDomanda {
+  text-align: center;
+  margin-top: 5vh;
+}
+#quiz-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Parte delle risposte sbagliate */
-.progress-ring-wrong {
-  fill: none;
-  stroke: #d20094;
-  stroke-width: 12;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
+footer {
+  padding: 0;
 }
-
-/* Parte delle risposte corrette */
-.progress-ring-correct {
-  fill: none;
-  stroke: #00ffff;
-  stroke-width: 12;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-  transition: stroke-dashoffset 0.5s ease;
+#contatore-domande {
+  color: #a50083;
 }
