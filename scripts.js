@@ -148,6 +148,9 @@ function avviaTimer() {
 
     if (tempoRimasto <= 0) {
       risposteDate.push("errore"); // nessuna risposta data
+      const risultatoFinale = calcolaRisultato(risposteDate, questions);
+        console.log("Numero risposte corrette:", risultatoFinale);
+        localStorage.setItem("risposteCorrette", risultatoFinale);
       clearInterval(timerInterval);
       indice++;
 
@@ -222,7 +225,6 @@ function mostraDomanda() {
         timeWrapper.style.display = "none";
 
         // Dopo il quiz, puoi fare:
-        clearInterval(risultatoFinale);
         const risultatoFinale = calcolaRisultato(risposteDate, questions);
         console.log("Numero risposte corrette:", risultatoFinale);
         localStorage.setItem("risposteCorrette", risultatoFinale);
