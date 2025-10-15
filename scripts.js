@@ -158,12 +158,24 @@ function avviaTimer() {
       indice++
 
       if (indice >= questions.length) {
+<<<<<<< HEAD
         inviaBtn.style.display = "block"
         timeWrapper.style.display = "none"
         opzioniEl.innerHTML = ""
         domandaEl.textContent = "Hai risposto a tutte le domande!"
         contatoreDomande.textContent = `${questions.length}`
         return
+=======
+        inviaBtn.style.display = "block";
+        timeWrapper.style.display = "none";
+        opzioniEl.innerHTML = "";
+        domandaEl.textContent = "Hai risposto a tutte le domande!";
+        contatoreDomande.textContent = `${questions.length}`;
+        const risultatoFinale = calcolaRisultato(risposteDate, questions);
+        console.log("Numero risposte corrette:", risultatoFinale);
+        localStorage.setItem("risposteCorrette", risultatoFinale);
+        return;
+>>>>>>> main
       }
 
       mostraDomanda()
@@ -229,10 +241,21 @@ function mostraDomanda() {
         timeWrapper.style.display = "none"
 
         // Dopo il quiz, puoi fare:
+<<<<<<< HEAD
         clearInterval(risultatoFinale)
         const risultatoFinale = calcolaRisultato(risposteDate, questions)
         console.log("Numero risposte corrette:", risultatoFinale)
         return
+=======
+<<<<<<< HEAD
+        
+=======
+>>>>>>> cae356b9039a336dcb7f60b7d4272bdb453fac28
+        const risultatoFinale = calcolaRisultato(risposteDate, questions);
+        console.log("Numero risposte corrette:", risultatoFinale);
+        localStorage.setItem("risposteCorrette", risultatoFinale);
+        return;
+>>>>>>> main
       }
 
       // altrimenti mostra la prossima domanda
