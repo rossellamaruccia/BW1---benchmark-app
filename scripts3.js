@@ -43,13 +43,13 @@ const circleResult = () => {
   const circleText = document.getElementById("circle-progress-text");
 
   const inserisciTesto = () => {
-    const testoPromosso = document.getElementById("testoCorretto");
-    const testoBocciato = document.getElementById("testoSbagliato");
+    const testoPromosso = document.getElementById("passed");
+    const testoBocciato = document.getElementById("failed");
 
     if (correct >= 6) {
-      testoPromosso.style.display = "block";
+      testoPromosso.style.opacity = "1";
     } else {
-      testoBocciato.style.display = "block";
+      testoBocciato.style.opacity = "1";
     }
   };
   inserisciTesto();

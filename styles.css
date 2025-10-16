@@ -18,6 +18,10 @@ footer {
   padding-bottom: 2em;
 }
 
+footer {
+  padding: 0;
+}
+
 .logo {
   width: 200px;
 }
@@ -272,27 +276,28 @@ label {
 .progress-ring-background {
   fill: none;
   stroke: #e0e0e0;
-  stroke-width: 15;
+  stroke-width: 35;
 }
 
 /* Parte delle risposte sbagliate */
 .progress-ring-wrong {
   fill: none;
   stroke: #d20094;
-  stroke-width: 12;
-  stroke-linecap: round;
+  stroke-width: 40;
+  stroke-linecap: butt;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke-dasharray: 377;
   stroke-dashoffset: 377;
+  position: relative;
 }
 
 /* Parte delle risposte corrette */
 .progress-ring-correct {
   fill: none;
   stroke: #00ffff;
-  stroke-width: 12;
-  stroke-linecap: round;
+  stroke-width: 40;
+  stroke-linecap: butt;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke-dasharray: 377;
@@ -330,38 +335,6 @@ label {
   transform: scale(1.05); /* effetto hover */
 }
 
-/* Cerchio di sfondo */
-.progress-ring-background {
-  fill: none;
-  stroke: #e0e0e0;
-  stroke-width: 40;
-}
-
-/* Parte delle risposte sbagliate */
-.progress-ring-wrong {
-  fill: none;
-  stroke: #d20094;
-  stroke-width: 40;
-  stroke-linecap: butt;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-  position: relative;
-}
-
-/* Parte delle risposte corrette */
-.progress-ring-correct {
-  fill: none;
-  stroke: #00ffff;
-  stroke-width: 40;
-  stroke-linecap: butt;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-  transition: stroke-dashoffset 0.5s ease;
-}
 /* CONTENITORE OPZIONI */
 #opzioni {
   display: grid;
@@ -403,29 +376,45 @@ label {
   margin-right: auto;
 }
 
-footer {
-  padding: 0;
-}
 #contatore-domande {
   color: #a50083;
 }
 
-#testoNelCerchio {
+/* PAGINA DEI RISULTATI */
+
+#centrato {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-47%, -10%);
+  transform: translate(-50%, -100%);
   text-align: center;
-  width: 200px;
+}
+#centrato h4 {
+  font-size: 23px;
+  margin-bottom: 0.5em;
+  margin-bottom: 20px;
+}
+#centrato h4 span {
+  color: #00ffff;
+  font-weight: bold;
+}
+#centrato p {
+  font-size: 17px;
 }
 
-#pTesto {
-  width: 100%;
+#passed {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%, -33%);
+  text-align: center;
 }
+#failed {
+  opacity: 0;
+  top: 50%;
+  left: 50%;
 
-#testoCorretto {
-  display: none;
-}
-#testoSbagliato {
-  display: none;
+  transform: translate(1%, 35%);
+  text-align: center;
 }
