@@ -183,7 +183,6 @@ label {
 #resultscontainer div {
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
   text-align: center;
   padding: 10px 60px;
 }
@@ -200,9 +199,7 @@ label {
 #resultscontainer .WrongAnswers {
   display: inline-block;
   width: auto;
-  vertical-align: middle;
   font-size: 16px;
-  margin: 0 20px;
   text-align: center;
 }
 #resultscontainer #Circle {
@@ -212,6 +209,11 @@ label {
   font-size: 16px;
   margin: 0 30px;
   text-align: center;
+}
+
+#circle-progress-text text {
+  display: inline-block;
+  width: 10%;
 }
 /* bottone */
 #rateUs {
@@ -266,36 +268,36 @@ label {
   min-height: 70vh; /* lascia spazio sopra e sotto per header e footer */
 }
 
-/* CONTENITORE OPZIONI */
-#opzioni {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* due bottoni per riga */
-  gap: 1rem 1.5rem; /* 1rem verticale, 1.5rem orizzontale tra colonne */
-  justify-items: center; /* centra i bottoni nella colonna */
-  margin-top: 2rem; /* distanza dalla domanda */
+/* Cerchio di sfondo */
+.progress-ring-background {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 15;
 }
 
-/* BOTTONI DELLE OPZIONI */
-#opzioni button {
-  width: 200px; /* bottoni grandi */
-  padding: 1.5rem 0; /* maggiore altezza tra i bottoni */
-  border-radius: 16px; /* angoli arrotondati */
-  background-color: rgba(
-    0,
-    40,
-    80,
-    0.85
-  ); /* blu scuro semi-trasparente, da trovare migliore colore */
-  color: #fff; /* testo bianco */
-  font-size: 1.5rem; /* testo grande */
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+/* Parte delle risposte sbagliate */
+.progress-ring-wrong {
+  fill: none;
+  stroke: #d20094;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
 }
 
-#opzioni button:hover {
-  background-color: rgba(0, 60, 120, 0.95);
-  transform: scale(1.05); /* effetto hover */
+/* Parte delle risposte corrette */
+.progress-ring-correct {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 0.5s ease;
 }
 
 /* DOMANDA H1 */
@@ -324,7 +326,7 @@ label {
 }
 
 #quiz-container button#invia-risposte:hover {
-  background-color: #0099cc; /* leggero scurimento al passaggio del mouse */
+  background-color: #a50083; /* leggero scurimento al passaggio del mouse */
   transform: scale(1.05); /* effetto hover */
 }
 
@@ -358,4 +360,51 @@ label {
   stroke-dasharray: 377;
   stroke-dashoffset: 377;
   transition: stroke-dashoffset 0.5s ease;
+}
+/* CONTENITORE OPZIONI */
+#opzioni {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* due bottoni per riga */
+  gap: 1rem 1.5rem; /* 1rem verticale, 1.5rem orizzontale tra colonne */
+  justify-items: center; /* centra i bottoni nella colonna */
+  margin-top: 2rem; /* distanza dalla domanda */
+}
+
+/* BOTTONI DELLE OPZIONI */
+#opzioni button {
+  width: 200px; /* bottoni grandi */
+  padding: 1.5rem 0; /* maggiore altezza tra i bottoni */
+  border-radius: 16px; /* angoli arrotondati */
+  background-color: rgba(
+    0,
+    40,
+    80,
+    0.85
+  ); /* blu scuro semi-trasparente, da trovare migliore colore */
+  color: #fff; /* testo bianco */
+  font-size: 1.5rem; /* testo grande */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#opzioni button:hover {
+  background-color: rgba(0, 60, 120, 0.95);
+  transform: scale(1.05); /* effetto hover */
+}
+#contenitoreDomanda {
+  text-align: center;
+  margin-top: 5vh;
+}
+#quiz-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  padding: 0;
+}
+#contatore-domande {
+  color: #a50083;
 }
