@@ -347,6 +347,7 @@ label {
   transform-origin: 50% 50%;
   stroke-dasharray: 377;
   stroke-dashoffset: 377;
+  position: relative;
 }
 
 /* Parte delle risposte corrette */
@@ -407,4 +408,24 @@ footer {
 }
 #contatore-domande {
   color: #a50083;
+}
+
+#testoNelCerchio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%, -10%);
+  text-align: center;
+  width: 200px;
+}
+
+#pTesto {
+  width: 100%;
+}
+
+#testoCorretto {
+  display: none;
+}
+#testoSbagliato {
+  display: none;
 }

@@ -27,31 +27,30 @@
           <div id="percentualeC"></div>
         </div>
         <div class="progress-circle">
-        <div id="Circle">
-          <svg class="progress-ring" width="400" height="500">
-            <circle
-              class="progress-ring-background"
-              cx="200"
-              cy="200"
-              r="180"
-            />
-            <circle class="progress-ring-wrong" cx="250" cy="250" r="180" />
-            <circle class="progress-ring-correct" cx="250" cy="250" r="180" />
-            <text
-              id="circle-progress-text"
-              x="210"
-              y="180"
-              text-anchor="middle"
-              font-size="18"
-              fill="#ffff"
-            >
-              test superato
-            </text>
-          </svg>
-        </div>
-        <div class="WrongAnswers">
-          <h2>Wrong</h2>
-          <div id="percentualeW"></div>
+          <div id="Circle">
+            <svg class="progress-ring" width="400" height="500">
+              <circle
+                class="progress-ring-background"
+                cx="200"
+                cy="200"
+                r="180"
+              />
+              <circle class="progress-ring-wrong" cx="250" cy="250" r="180" />
+              <circle class="progress-ring-correct" cx="250" cy="250" r="180" />
+            </svg>
+            <div id="testoNelCerchio">
+              <p id="testoCorretto">
+                Congratulations! You passed the exam.We'll send you the
+                certificate in few minutes.Check your email (including
+                promotions / spam folder)
+              </p>
+              <p id="testoSbagliato">Sorry! You didn't pass the exam.</p>
+            </div>
+          </div>
+          <div class="WrongAnswers">
+            <h2>Wrong</h2>
+            <div id="percentualeW"></div>
+          </div>
         </div>
       </div>
       <button id="rateUs">RATE US</button>
