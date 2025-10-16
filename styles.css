@@ -1,50 +1,45 @@
+/* STILI GENERALI E PRIMA PAGINA */
+
 body {
   width: 100vw;
   background-image: url(./assets/bg.jpg);
   background-size: cover;
   color: white;
   font-family: "Inter", sans-serif;
+  text-align: center;
+  margin: 0 auto;
 }
 
 header {
   text-align: left;
   padding-top: 2em;
   padding-left: 5em;
-  display: inline-block;
-}
-
-footer {
-  padding-left: 5em;
-  padding-bottom: 2em;
-}
-
-footer {
-  padding: 0;
 }
 
 .logo {
-  width: 200px;
-}
-
-#timer-wrapper {
-  display: inline;
-  padding-left: 80%;
+  width: 15em;
 }
 
 #welcome_page {
   text-align: left;
   display: block;
-  padding: 5em;
+  padding-left: 6em;
+}
+
+#welcome_page h1{
+  width: 25%;
 }
 
 h1 {
   font-family: "Outfit", sans-serif;
-  font-size: 60px;
+  font-size: 6em;
+  font-weight: normal;
+  padding-top: 1.5em;
 }
 
 h2 {
   font-family: "Outfit", sans-serif;
-  font-size: 2em;
+  font-size: 5em;
   font-weight: normal;
   max-width: 60%;
   margin: auto;
@@ -52,20 +47,35 @@ h2 {
 
 h3 {
   font-family: "Outfit", sans-serif;
-  font-size: 2em;
+  font-size: 4em;
   font-weight: normal;
   margin: auto;
   max-width: 50%;
 }
 
+h4{
+  font-family: "Outfit", sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+  margin: auto;
+  max-width: 60%;
+}
+
+h6{
+  font-family: "Outfit", sans-serif;
+  font-size: 5em;
+  font-weight: bold;
+  margin: auto;
+}
+
 h5 {
   font-family: "Outfit", sans-serif;
   color: #d20094;
-  font-size: 24px;
+  font-size: 3em;
 }
 
 p {
-  font-size: 16px;
+  font-size: 2em;
 }
 
 ul {
@@ -75,13 +85,17 @@ ul {
 
 li {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 2em;
   line-height: 2em;
 }
 
 label {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 2em;
+}
+
+a{
+  text-decoration: none;
 }
 
 .blue_button {
@@ -90,156 +104,19 @@ label {
   padding: 0.8em 3em;
   box-shadow: 0px 0px 35px 5px #00ffff;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 2em;
   font-weight: bold;
   color: #0b1d45;
-  text-align: center;
+  cursor: pointer;
 }
 
 .checkbox_div {
   display: inline-block;
-  width: 80%;
+  width: 70%;
 }
 
-#feedback-page {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
+/* SECONDA PAGINA */
 
-#rating-stars {
-  margin-top: 5em;
-  margin-bottom: 5em;
-  text-align: center;
-}
-
-#rating-stars span {
-  padding-left: 30px;
-}
-
-#rating-stars img {
-  cursor: pointer;
-  width: 3.8em;
-}
-
-#rating-stars img.hovered,
-#rating-stars img.selected {
-  /* background-color: #d20094; */
-  padding: 3px;
-  filter: brightness(1.2) saturate(1.4) sepia(1) hue-rotate(10deg) saturate(4)
-    brightness(1.1);
-}
-
-#comment {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#comment input {
-  width: 50%;
-  background-color: transparent;
-  font-size: 1.4em;
-  margin: 90px;
-  border: unset;
-  border-bottom: #d20094 solid 3px;
-  color: white;
-  outline: none;
-}
-
-#comment input:hover {
-  font-size: 1.8em;
-}
-#feedback-page .blue_button {
-  display: block;
-  margin: auto;
-  font-size: 2em;
-  cursor: pointer;
-}
-#feedback-page button:hover {
-  font-size: 2.1em;
-}
-
-.titResults {
-  text-align: center;
-  font-size: 50px;
-  margin: 0 auto;
-  margin-bottom: 2em;
-}
-.titResults h2 {
-  color: white;
-  font-size: 60px;
-  margin: 0 auto;
-}
-.titResults h3 {
-  font-size: 35px;
-  margin: 0 auto;
-  font-weight: normal;
-}
-#resultscontainer {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 0;
-  margin-top: 3em;
-  /* posizionare tutti gli elementi uno accanto all'altro */
-}
-#resultscontainer div {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  padding: 10px 60px;
-}
-#resultscontainer h2 {
-  color: white;
-  font-weight: normal;
-  font-size: 60px;
-  margin: 0 auto;
-}
-/* testp percentuale */
-
-/* Risposte esatte e sbagliate */
-#resultscontainer .RightAnswers,
-#resultscontainer .WrongAnswers {
-  display: inline-block;
-  width: auto;
-  font-size: 16px;
-  text-align: center;
-}
-#resultscontainer #Circle {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-  font-size: 16px;
-  margin: 0 30px;
-  text-align: center;
-}
-
-#circle-progress-text text {
-  display: inline-block;
-  width: 10%;
-}
-/* bottone */
-#rateUs {
-  display: block;
-  margin: 0 auto;
-  font-weight: bold;
-  font-size: 20px;
-  color: white;
-  background-color: transparent;
-  border: white solid 2px;
-  margin-top: 5em;
-  box-shadow: none;
-  padding: 18px 68px;
-}
-#rateUs:hover {
-  box-shadow: 0px 0px 35px 5px #00ffff;
-  background-color: #00ffff;
-  color: #0b1d45;
-  cursor: pointer;
-}
-
-/*CSS PAGINA 2 */
 #timer-wrapper {
   position: absolute;
   top: 5%;
@@ -247,6 +124,11 @@ label {
   width: 160px;
   height: 160px;
 }
+
+/* #timer-wrapper {
+  display: inline;
+  padding-left: 80%;
+} */
 
 #timer-wrapper svg {
   width: 100%;
@@ -256,20 +138,129 @@ label {
 /*fino a qui tutto bene */
 /* DOMANDA */
 #domanda {
-  color: #fff; /* bianco */
-  font-size: 2.5rem; /* più grande */
-  text-align: center;
+  
   font-weight: 400;
-  margin-bottom: 1rem;
+  font-size: 4em;
+  width: 70%;
+  margin-left: 15%;
+  padding-top: 3em;
+  padding-bottom: 0.8em;
 }
 
 /* CONTENITORE OPZIONI CENTRATO VERTICALMENTE E ORIZZONTALMENTE */
 #quiz-container {
+  height: 800px;
+  margin: 1rem auto;
+  /* padding: 20%, 20%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra orizzontalmente */
-  justify-content: center; /* centra verticalmente */
-  min-height: 70vh; /* lascia spazio sopra e sotto per header e footer */
+  align-items: center; centra orizzontalmente
+  justify-content: center; centra verticalmente */
+  /* min-height: 70vh; */
+}
+
+/* #quiz-container {
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/*fino a qui tutto bene 2*/
+
+/* BOTTONE INVIA RISPOSTE - RETTANGOLARE CON VW/VH */
+#invia-risposte {
+  width: 20%; /* larghezza proporzionale allo schermo */
+  height: 12vh; /* altezza proporzionale */
+  background-color: #a50083;
+  color: #fff;
+  font-size: 2.5vh; /* testo scalabile */
+  font-weight: 600;
+  border: none;
+  border-radius: 2vh; /* angoli arrotondati proporzionali */
+  cursor: pointer;
+  margin-left: 40%;
+  margin-top: 10%; /* distanza dal blocco delle opzioni */
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0px 0px 29px 5px rgba(143,0,113,0.63);
+}
+
+footer{
+  margin-top: 10%;
+}
+
+#invia-risposte:hover {
+  background-color: #a50083; /* leggero scurimento al passaggio del mouse */
+  transform: scale(1.05); /* effetto hover */
+}
+
+/* CONTENITORE OPZIONI */
+#opzioni {
+  width: 40%;
+  margin-left: 30%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* due bottoni per riga */
+  gap: 2rem 1em; /* 1rem verticale, 1.5rem orizzontale tra colonne */
+  justify-items: center; /* centra i bottoni nella colonna */
+  margin-top: 2rem; /* distanza dalla domanda */
+}
+
+/* BOTTONI DELLE OPZIONI */
+
+#opzioni button {
+  width: 450px; /* bottoni grandi */
+  padding: 1.5rem 0; /* maggiore altezza tra i bottoni */
+  border-radius: 40px; /* angoli arrotondati */
+  background-color: #97979725; /*colore sfondo bottoni */
+  color: #fff; /* testo bianco */
+  font-size: 2rem; /* testo grande */
+  border: none;
+  cursor: pointer;
+  /* fa l'effetto ombra top */
+  box-shadow: 0 -4px 8px rgb(255, 255, 255, 1.4);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#opzioni button:hover {
+  background-color: rgba(246, 84, 255, 0.53);
+  transform: scale(1.05); /* effetto hover  */
+}
+
+#contenitoreDomanda {
+  margin-top: 5vh;
+}
+
+#contatore-domande {
+  color: #a50083;
+}
+
+
+
+/* TERZA PAGINA */
+
+#resultscontainer {
+  width: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+  font-size: 0;
+  
+}
+#resultscontainer div {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 60px;
+}
+
+/* #resultscontainer h2 {
+  color: white;
+  font-weight: normal;
+  font-size: 60px;
+  margin: 0 auto;
+} */
+
+#Circle {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
 }
 
 /* Cerchio di sfondo */
@@ -305,90 +296,15 @@ label {
   transition: stroke-dashoffset 0.5s ease;
 }
 
-/* DOMANDA H1 */
-#domanda {
-  color: #fff;
-  font-size: 2.8rem; /* testo */
-  text-align: center;
-  margin-bottom: 1.5rem; /* piccolo spazio sotto la domanda */
-}
-
-/*fino a qui tutto bene 2*/
-
-/* BOTTONE INVIA RISPOSTE - RETTANGOLARE CON VW/VH */
-#quiz-container button#invia-risposte {
-  width: 25vw; /* larghezza proporzionale allo schermo */
-  height: 12vh; /* altezza proporzionale */
-  background-color: #a50083;
-  color: #fff; /* testo bianco */
-  font-size: 2vh; /* testo scalabile */
-  font-weight: bold;
-  border: none;
-  border-radius: 2vh; /* angoli arrotondati proporzionali */
-  cursor: pointer;
-  margin-top: 2vh; /* distanza dal blocco delle opzioni */
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-#quiz-container button#invia-risposte:hover {
-  background-color: #a50083; /* leggero scurimento al passaggio del mouse */
-  transform: scale(1.05); /* effetto hover */
-}
-
-/* CONTENITORE OPZIONI */
-#opzioni {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* due bottoni per riga */
-  gap: 1rem 1.5rem; /* 1rem verticale, 1.5rem orizzontale tra colonne */
-  justify-items: center; /* centra i bottoni nella colonna */
-  margin-top: 2rem; /* distanza dalla domanda */
-}
-
-/* BOTTONI DELLE OPZIONI */
-#opzioni button {
-  width: 200px; /* bottoni grandi */
-  padding: 1.5rem 0; /* maggiore altezza tra i bottoni */
-  border-radius: 16px; /* angoli arrotondati */
-  background-color: rgba(
-    0,
-    40,
-    80,
-    0.85
-  ); /* blu scuro semi-trasparente, da trovare migliore colore */
-  color: #fff; /* testo bianco */
-  font-size: 1.5rem; /* testo grande */
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-#opzioni button:hover {
-  background-color: rgba(0, 60, 120, 0.95);
-  transform: scale(1.05); /* effetto hover */
-}
-#contenitoreDomanda {
-  text-align: center;
-  margin-top: 5vh;
-}
-#quiz-container {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#contatore-domande {
-  color: #a50083;
-}
-
-/* PAGINA DEI RISULTATI */
-
 #centrato {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   text-align: center;
+  width: 80%;
 }
+
 #centrato h4 {
   font-size: 23px;
   margin-bottom: 0.5em;
@@ -406,15 +322,130 @@ label {
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-47%, -33%);
-  text-align: center;
 }
+
 #failed {
   opacity: 0;
   top: 50%;
   left: 50%;
-
   transform: translate(1%, 35%);
-  text-align: center;
+}
+
+.titResults {
+  font-size: 50px;
+  margin-top: 5%;
+  margin-bottom: 30px;
+}
+
+.titResults h2 {
+  font-size: 60px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.titResults h3 {
+  font-size: 35px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+/* Risposte esatte e sbagliate */
+#resultscontainer .RightAnswers,
+#resultscontainer .WrongAnswers {
+  display: inline-block;
+  width: auto;
+  font-size: 16px;
+}
+
+#percentualeC{
+  text-align: left;
+}
+
+#circle-progress-text text {
+  display: inline-block;
+  width: 10%;
+}
+/* bottone */
+#rateUs {
+  display: block;
+  margin: auto auto;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  background-color: transparent;
+  border: white solid 5px;
+  box-shadow: none;
+  padding: 25px 80px;
+}
+#rateUs:hover {
+  box-shadow: 0px 0px 35px 5px #00ffff;
+  background-color: #00ffff;
+  color: #0b1d45;
+  cursor: pointer;
+}
+
+
+/* QUARTA PAGINA */
+
+#feedback-page {
+  display: block;
+  width: 100%;
+}
+
+#rating-stars {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+#rating-stars span {
+  padding-left: 30px;
+}
+
+#rating-stars img {
+  cursor: pointer;
+  width: 3.8em;
+}
+
+#rating-stars img.hovered,
+#rating-stars img.selected {
+  /* background-color: #d20094; */
+
+  filter: brightness(1.2) saturate(1.4) sepia(1) hue-rotate(10deg) saturate(4)
+    brightness(1.1);
+}
+
+#rating-stars img.selected {
+  padding: 3px;}
+
+#comment {
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#comment input {
+  width: 50%;
+  background-color: transparent;
+  font-size: 1.4em;
+  margin: 90px;
+  border: unset;
+  border-bottom: #d20094 solid 3px;
+  color: white;
+  outline: none;
+}
+
+#comment input:hover {
+  font-size: 1.8em;
+}
+
+#feedback-page .blue_button {
+  display: block;
+  margin: auto;
+}
+
+#feedback-page button:hover {
+  font-size: 2.1em;
 }

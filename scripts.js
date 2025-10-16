@@ -155,7 +155,7 @@ function avviaTimer() {
       console.log("Numero risposte corrette:", risultatoFinale)
       localStorage.setItem("risposteCorrette", risultatoFinale)
       clearInterval(timerInterval)
-      indice++
+      
 
       if (indice >= questions.length) {
         inviaBtn.style.display = "block"

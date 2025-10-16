@@ -1,14 +1,14 @@
 const percentDiv = document.getElementById("percentualeC");
 
-percentDiv.innerHTML = `<h2>${
+percentDiv.innerHTML = `<h6>${
   parseInt(localStorage.getItem("risposteCorrette")) * 10
-}%</h2><p>${localStorage.getItem("risposteCorrette")}/10 questions</p>`;
+}%</h6><p>${localStorage.getItem("risposteCorrette")}/10 questions</p>`;
 
 const wrongPercent = document.getElementById("percentualeW");
 
-wrongPercent.innerHTML = `<h2>${
+wrongPercent.innerHTML = `<h6>${
   100 - parseInt(localStorage.getItem("risposteCorrette")) * 10
-}%</h2><p>${10 - localStorage.getItem("risposteCorrette")}/10 questions</p>`;
+}%</h6><p>${10 - localStorage.getItem("risposteCorrette")}/10 questions</p>`;
 
 // bottone che porta alla pagina di feedback
 const Button = document.getElementById("rateUs");
