@@ -265,7 +265,12 @@ label {
   flex-direction: column;
   align-items: center; /* centra orizzontalmente */
   justify-content: center; /* centra verticalmente */
+<<<<<<< HEAD
   min-height: 70vh; /* lascia spazio sopra e sotto per header e footer */
+=======
+  min-height: 70vh; /* lascia spazio sopra e sotto per header e footer
+ */
+>>>>>>> 7d1017ca031ead46c8a13f0d331cfacf98de97c8
 }
 
 /* Cerchio di sfondo */
@@ -328,6 +333,7 @@ label {
 #quiz-container button#invia-risposte:hover {
   background-color: #a50083; /* leggero scurimento al passaggio del mouse */
   transform: scale(1.05); /* effetto hover */
+<<<<<<< HEAD
 }
 
 /* Cerchio di sfondo */
@@ -368,6 +374,8 @@ label {
   gap: 1rem 1.5rem; /* 1rem verticale, 1.5rem orizzontale tra colonne */
   justify-items: center; /* centra i bottoni nella colonna */
   margin-top: 2rem; /* distanza dalla domanda */
+=======
+>>>>>>> 7d1017ca031ead46c8a13f0d331cfacf98de97c8
 }
 
 /* BOTTONI DELLE OPZIONI */
