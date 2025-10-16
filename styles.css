@@ -95,6 +95,10 @@ label {
   color: #0b1d45;
   text-align: center;
 }
+.blue_button a {
+  text-decoration: none;
+  color: black;
+}
 
 .checkbox_div {
   display: inline-block;
@@ -390,7 +394,7 @@ label {
   text-align: center;
 }
 #centrato h4 {
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 0.5em;
   margin-bottom: 20px;
 }
@@ -399,14 +403,14 @@ label {
   font-weight: bold;
 }
 #centrato p {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 #passed {
   opacity: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 120%;
+  left: 54%;
   transform: translate(-47%, -33%);
   text-align: center;
 }
@@ -417,4 +421,15 @@ label {
 
   transform: translate(1%, 35%);
   text-align: center;
+}
+
+#meme {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 30%;
+  background-image: url(./assets/bg.jpg);
+}
+#meme img {
+  width: 70%;
 }
