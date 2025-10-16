@@ -46,7 +46,7 @@ const circleResult = () => {
     let text = ""
     if (correct >= 6) {
       text =
-        "Congratulations! You passed the exam. We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)"
+        "Congratulations! You passed the exam.We'll send you the certificate in few minutes.Check your email (including promotions / spam folder)"
     } else {
       text = "Sorry! You didn't pass the exam."
     }

@@ -183,7 +183,6 @@ label {
 #resultscontainer div {
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
   text-align: center;
   padding: 10px 60px;
 }
@@ -200,9 +199,7 @@ label {
 #resultscontainer .WrongAnswers {
   display: inline-block;
   width: auto;
-  vertical-align: middle;
   font-size: 16px;
-  margin: 0 20px;
   text-align: center;
 }
 #resultscontainer #Circle {
@@ -212,6 +209,11 @@ label {
   font-size: 16px;
   margin: 0 30px;
   text-align: center;
+}
+
+#circle-progress-text text {
+  display: inline-block;
+  width: 10%;
 }
 /* bottone */
 #rateUs {
@@ -263,12 +265,7 @@ label {
   flex-direction: column;
   align-items: center; /* centra orizzontalmente */
   justify-content: center; /* centra verticalmente */
-<<<<<<< HEAD
   min-height: 70vh; /* lascia spazio sopra e sotto per header e footer */
-=======
-  min-height: 70vh; /* lascia spazio sopra e sotto per header e footer
- */
->>>>>>> main
 }
 
 /* Cerchio di sfondo */
@@ -317,11 +314,7 @@ label {
 #quiz-container button#invia-risposte {
   width: 25vw; /* larghezza proporzionale allo schermo */
   height: 12vh; /* altezza proporzionale */
-<<<<<<< HEAD
-  background-color: #00bfff;
-=======
   background-color: #a50083;
->>>>>>> main
   color: #fff; /* testo bianco */
   font-size: 2vh; /* testo scalabile */
   font-weight: bold;
@@ -333,43 +326,6 @@ label {
 }
 
 #quiz-container button#invia-risposte:hover {
-<<<<<<< HEAD
-  background-color: #0099cc; /* leggero scurimento al passaggio del mouse */
-  transform: scale(1.05); /* effetto hover */
-}
-
-/* Cerchio di sfondo */
-.progress-ring-background {
-  fill: none;
-  stroke: #e0e0e0;
-  stroke-width: 40;
-}
-
-/* Parte delle risposte sbagliate */
-.progress-ring-wrong {
-  fill: none;
-  stroke: #d20094;
-  stroke-width: 40;
-  stroke-linecap: butt;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-}
-
-/* Parte delle risposte corrette */
-.progress-ring-correct {
-  fill: none;
-  stroke: #00ffff;
-  stroke-width: 40;
-  stroke-linecap: butt;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
-  transition: stroke-dashoffset 0.5s ease;
-}
-=======
   background-color: #a50083; /* leggero scurimento al passaggio del mouse */
   transform: scale(1.05); /* effetto hover */
 }
@@ -452,4 +408,3 @@ footer {
 #contatore-domande {
   color: #a50083;
 }
->>>>>>> main

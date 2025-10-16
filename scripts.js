@@ -232,7 +232,9 @@ function mostraDomanda() {
         timeWrapper.style.display = "none"
 
         // Dopo il quiz, puoi fare:
+
         const risultatoFinale = calcolaRisultato(risposteDate, questions)
+        localStorage.setItem("risposteCorrette", risultatoFinale)
         console.log("Numero risposte corrette:", risultatoFinale)
         return
       }
