@@ -20,3 +20,11 @@ stars.forEach((star, index) => {
     console.log(selected + 1)
   })
 })
+
+const button = document.getElementById("blueBotton")
+button.addEventListener("click", () => {
+  if (selected === 0) {
+    event.preventDefault()
+    alert("Fà il serio e lascia 10 stelle")
+  }
+})
