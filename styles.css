@@ -109,15 +109,39 @@ a {
   color: #0b1d45;
   cursor: pointer;
 }
-.blue_button a {
-  text-decoration: none;
-  color: black;
-}
 
 .checkbox_div {
   display: inline-block;
   width: 70%;
 }
+
+input[type="checkbox"] {
+  appearance: none;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.20em solid currentColor;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.60em;
+  height: 0.60em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+
+input[type="checkbox"]:checked::before{
+  transform: scale(1);
+  background-color: #a50083;
+}
+
 
 /* SECONDA PAGINA */
 
@@ -128,11 +152,6 @@ a {
   width: 160px;
   height: 160px;
 }
-
-/* #timer-wrapper {
-  display: inline;
-  padding-left: 80%;
-} */
 
 #timer-wrapper svg {
   width: 100%;
@@ -154,18 +173,8 @@ a {
 #quiz-container {
   height: 800px;
   margin: 1rem auto;
-  /* padding: 20%, 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; centra orizzontalmente
-  justify-content: center; centra verticalmente */
-  /* min-height: 70vh; */
 }
 
-/* #quiz-container {
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 /*fino a qui tutto bene 2*/
 
@@ -249,13 +258,6 @@ footer {
   padding: 10px 60px;
 }
 
-/* #resultscontainer h2 {
-  color: white;
-  font-weight: normal;
-  font-size: 60px;
-  margin: 0 auto;
-} */
-
 #Circle {
   position: relative;
   width: 400px;
@@ -301,13 +303,12 @@ footer {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 #centrato h4 {
-  font-size: 20px;
-  text-align: center;
-  width: 100vw;
-  margin-right: 29vW;
+  font-size: 24px;
+  width: 100vW;
 }
 
 #centrato span {
@@ -316,17 +317,15 @@ footer {
 }
 
 #centrato p {
-  font-size: 14px;
-  margin-right: 6vW;
+  font-size: 18px;
 }
 
 #passed {
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 48%;
-  transform: translate(-47%, -33%);
-
+  left: 50%;
+  transform: translate(-50%, -30%);
 }
 
 #failed {
@@ -462,7 +461,7 @@ footer {
   flex-direction: column;
   width: 50%;
   padding-left: 30%;
-  background-image: url(./assets/bg.jpg);
+  /* background-image: url(./assets/bg.jpg); */
 }
 #meme img {
   width: 70%;

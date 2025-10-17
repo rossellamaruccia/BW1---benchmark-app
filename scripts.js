@@ -161,7 +161,7 @@ function avviaTimer() {
         inviaBtn.style.display = "block"
         timeWrapper.style.display = "none"
         opzioniEl.innerHTML = ""
-        domandaEl.textContent = "Hai risposto a tutte le domande!"
+        domandaEl.textContent = "You answered all the questions!"
         contatoreDomande.textContent = `${questions.length}`
         const risultatoFinale = calcolaRisultato(risposteDate, questions)
         console.log("Numero risposte corrette:", risultatoFinale)
@@ -183,7 +183,7 @@ const contatoreDomande = document.getElementById("contatore-domande")
 // Bottone "invia risposte" (alla fine)
 const inviaBtn = document.createElement("button")
 inviaBtn.id = "invia-risposte"
-inviaBtn.textContent = "Invia Risposte"
+inviaBtn.textContent = "SUBMIT"
 inviaBtn.style.display = "none"
 inviaBtn.onclick = () => {
   window.location.href = "results_page.html"
@@ -227,7 +227,7 @@ function mostraDomanda() {
       if (indice === questions.length) {
         inviaBtn.style.display = "block"
         opzioniEl.innerHTML = "" // rimuovi bottoni
-        domandaEl.textContent = "Hai risposto a tutte le domande!"
+        domandaEl.textContent = "You answered all the questions!"
         contatoreDomande.textContent = `${questions.length}`
         timeWrapper.style.display = "none"
 
