@@ -120,7 +120,7 @@ let valutaRisposte = () => {
   return (window.numeroRisposteCorrette = numeroCorrette)
 }
 
-let tempoRimasto = 5
+let tempoRimasto = 45
 let timerInterval = null
 
 function avviaTimer() {
@@ -132,7 +132,7 @@ function avviaTimer() {
   circle.style.strokeDasharray = circonferenza
   circle.style.strokeDashoffset = 0
 
-  tempoRimasto = 5
+  tempoRimasto = 45
   text.textContent = tempoRimasto
 
   // cancella un eventuale timer precedente

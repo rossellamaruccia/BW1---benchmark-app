@@ -301,21 +301,23 @@ footer {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
 }
 
 #centrato h4 {
   font-size: 20px;
-  margin-bottom: 0.5em;
-  margin-bottom: 20px;
+  text-align: center;
+  width: 100vw;
+  margin-right: 29vW;
 }
-#centrato h4 span {
+
+#centrato span {
   color: #00ffff;
   font-weight: bold;
 }
+
 #centrato p {
   font-size: 14px;
+  margin-right: 6vW;
 }
 
 #passed {
@@ -324,6 +326,7 @@ footer {
   top: 50%;
   left: 48%;
   transform: translate(-47%, -33%);
+
 }
 
 #failed {
@@ -331,6 +334,10 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(1%, 35%);
+}
+
+#failed h4{
+ margin-right: 26.5vW;
 }
 
 .titResults {
