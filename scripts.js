@@ -150,7 +150,7 @@ function avviaTimer() {
       risposteDate.push("errore") // nessuna risposta data
       clearInterval(timerInterval)
       indice++
-      risposteDate.push("errore") // nessuna risposta data
+
       const risultatoFinale = calcolaRisultato(risposteDate, questions)
       console.log("Numero risposte corrette:", risultatoFinale)
       localStorage.setItem("risposteCorrette", risultatoFinale)
